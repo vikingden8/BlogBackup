@@ -13,8 +13,9 @@ categories: "数据结构"
   for (int i = 1 ; i < n ; i++){
       sum += i ;
   }
-  System.out.println("sum : " + sum) ;
-```  
+  System.out.println("sum : " + sum) ;  
+
+```
 
 <!--more-->  
 
@@ -64,11 +65,11 @@ categories: "数据结构"
   * 如果最高阶项存在且不为1，则去除与这个项相乘的常数
   得到的结果就是大O阶。
 
-  常见的时间复杂度，见下图：  
+常见的时间复杂度，见下图：  
 ![常见的时间复杂度](/images/categories/data_structure/01/common.png)  
 
-  常用的时间复杂度所耗费的时间从小到大依次是：  
-  ![常见的时间复杂度耗费时间排序](/images/categories/data_structure/01/sort.png)  
+常用的时间复杂度所耗费的时间从小到大依次是：  
+![常见的时间复杂度耗费时间排序](/images/categories/data_structure/01/sort.png)  
 
 ## 算法空间复杂度  
 
