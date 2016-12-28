@@ -19,6 +19,7 @@ android:exported是Android中四大组件Activity、Service、Broadcast Receiver
   android:exported=["true" | "false"]
   ......
 ```
+<!--more-->  
 
 ![语法说明](/images/categories/android/android_notes/android_exported/android_exported_doc.png)  
 
