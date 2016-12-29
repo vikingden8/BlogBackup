@@ -73,3 +73,5 @@ deploy:
   type: git
   repository: https://github.com/vikingden8/vikingden8.github.io.git
   branch: master
+  user: vikingden7@gmail.com
+
