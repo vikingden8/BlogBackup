@@ -13,7 +13,8 @@ categories: "Android学习笔记"
 
 <!--more-->
 
-><font color="red">In Android, Handler classes should be static or leaks might occur, Messages enqueued on the application thread’s MessageQueue also retain their target Handler. If the Handler is an inner class, its outer class will be retained as well. To avoid leaking the outer class, declare the Handler as a static nested class with a WeakReference to its outer class.</font>  
+><font color="red">In Android, Handler classes should be static or leaks might occur, Messages enqueued on the application thread’s MessageQueue also retain their target Handler. If the Handler is an inner class, its outer class will be retained as well. To avoid leaking the outer class, declare the Handler as a static nested class with a WeakReference to its outer class.</font>    
+
 
 看到这里，可能还是有一些搞不清楚，代码中哪里可能导致内存泄露，又是如何导致内存泄露的呢？那我们就慢慢分析一下。
 
@@ -21,7 +22,8 @@ categories: "Android学习笔记"
 
 2.当一个Handler在主线程进行了初始化之后，我们发送一个target为这个Handler的消息到Looper处理的消息队列时，实际上已经发送的消息已经包含了一个Handler实例的引用，只有这样Looper在处理到这条消息时才可以调用Handler#handleMessage(Message)完成消息的正确处理。
 
-3.在Java中，非静态的内部类和匿名内部类都会隐式地持有其外部类的引用。静态的内部类不会持有外部类的引用。关于这一内容可以查看细话Java：”失效”的private修饰符
+3.在Java中，非静态的内部类和匿名内部类都会隐式地持有其外部类的引用。静态的内部类不会持有外部类的引用。关于这一内容可以查看细话Java：[“失效”的private修饰符](http://droidyue.com/blog/2014/10/02/the-private-modifier-in-java/)。  
+
 
 确实上面的代码示例有点难以察觉内存泄露，那么下面的例子就非常明显了:
 
