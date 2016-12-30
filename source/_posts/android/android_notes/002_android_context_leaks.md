@@ -12,7 +12,9 @@ Context是我们在编写Android程序经常使用到的对象，意思为上下
 
 ### Drawable引起的内存泄露  
 
-Drawable引起内存泄露这个问题是比较隐晦，难以察觉的。在阅读了Romain Guy的[Avoiding memory leaks](http://android-developers.blogspot.com.tr/2009/01/avoiding-memory-leaks.html)，结合grepcode查看源码才明白了。
+Drawable引起内存泄露这个问题是比较隐晦，难以察觉的。在阅读了Romain Guy的[Avoiding memory leaks](http://android-developers.blogspot.com.tr/2009/01/avoiding-memory-leaks.html)，结合grepcode查看源码才明白了。  
+
+<!--more-->
 
 在Android系统中，当我们进行了屏幕旋转，默认情况下，会销毁掉当前的Activity，并创建一个新的Activity并保持之前的状态。在这个过程中，Android系统会重新加载程序的UI视图和资源。假设我们有一个程序用到了一个很大的Bitmap图像，我们不想每次屏幕旋转时都重新加载这个Bitmap对象，最简单的办法就是将这个Bitmap对象使用static修饰。  
 
