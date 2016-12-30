@@ -21,21 +21,21 @@ Drawable引起内存泄露这个问题是比较隐晦，难以察觉的。在阅
 ```java
 private static Drawable sBackground;
 
-@Override
-protected void onCreate(Bundle state) {
-  super.onCreate(state);
+    @Override
+    protected void onCreate(Bundle state) {
+      super.onCreate(state);
 
-  TextView label = new TextView(this);
-  label.setText("Leaks are bad");
+      TextView label = new TextView(this);
+      label.setText("Leaks are bad");
 
-  if (sBackground == null) {
-    sBackground = getDrawable(R.drawable.large_bitmap);
-  }
-  label.setBackgroundDrawable(sBackground);
+      if (sBackground == null) {
+        sBackground = getDrawable(R.drawable.large_bitmap);
+      }
+      label.setBackgroundDrawable(sBackground);
 
-  setContentView(label);
+      setContentView(label);
 }
-```  
+```
 
 但是上面的方法在屏幕旋转时有可能引起内存泄露，无论是咋一看还是仔细看这段代码，都很难发现哪里引起了内存泄露。
 
@@ -47,7 +47,7 @@ protected void onCreate(Bundle state) {
 public final void setCallback(Callback cb) {
     mCallback = cb;
 }
-```  
+```
 
 好在从4.0.1开始，引入了弱引用处理这个问题，弱引用在GC回收时，不会阻止GC回收其指向的对象，避免了内存泄露问题:  
 
@@ -55,7 +55,7 @@ public final void setCallback(Callback cb) {
 public final void setCallback(Callback cb) {
     mCallback = new WeakReference<Callback>(cb);
 }
-```  
+```
 
 ### 单例引起的内存泄露  
 
@@ -75,7 +75,8 @@ public class AppSettings {
         mAppContext = context;
     }
 }
-```  
+```
+
 
 sInstance作为静态对象，其生命周期要长于普通的对象，其中也包含Activity，当我们进行屏幕旋转，默认情况下，系统会销毁当前Activity，然后当前的Activity被一个单例持有，导致垃圾回收器无法进行回收，进而产生了内存泄露。
 
@@ -85,6 +86,7 @@ public final void setup(Context context) {
     mAppContext = context.getApplicationContext();
 }
 ```
+
 
 通常我们想要获取Context对象，主要有以下四种方法:
 
