@@ -166,7 +166,7 @@ static {};
 
 values方法的的返回值实际上就是上面$VALUES数组对象
 
-#### swtich中的枚举  
+#### switch中的枚举  
 
 在Java中,switch-case是我们经常使用的流程控制语句.当枚举出来之后,switch-case也很好的进行了支持.
 
@@ -254,7 +254,7 @@ public static void main(java.lang.String[]);
 }
 ```
 
-关于为什么要保留values()方法和valueOf()方法，请参考文章[]读懂 Android 中的代码混淆](http://droidyue.com/blog/2016/07/10/understanding-android-obfuscated-code-by-proguard/) 关于枚举的部分
+关于为什么要保留values()方法和valueOf()方法，请参考文章[读懂 Android 中的代码混淆](http://droidyue.com/blog/2016/07/10/understanding-android-obfuscated-code-by-proguard/) 关于枚举的部分
 
 ### 使用proguard优化
 
@@ -332,7 +332,7 @@ AppManager appManager = new AppManager(); //compile error
   * 增加了dex包的大小，理论上dex包越大，加载速度越慢
   * 同时使用枚举，运行时的内存占用也会相对变大
 
-关于上面两点的验证，秋百万已经做了详细的论证，大家可以参考这篇文章《Android 中的 Enum 到底占多少内存？该如何用？》
+关于上面两点的验证，秋百万已经做了详细的论证，大家可以参考这篇文章[《Android 中的 Enum 到底占多少内存？该如何用？》](https://www.liaohuqiu.net/cn/posts/android-enum-memory-usage/)
 
 关于枚举是否使用的结论，大家可以参考
 
