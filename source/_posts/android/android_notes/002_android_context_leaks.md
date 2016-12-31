@@ -19,7 +19,7 @@ Drawable引起内存泄露这个问题是比较隐晦，难以察觉的。在阅
 在Android系统中，当我们进行了屏幕旋转，默认情况下，会销毁掉当前的Activity，并创建一个新的Activity并保持之前的状态。在这个过程中，Android系统会重新加载程序的UI视图和资源。假设我们有一个程序用到了一个很大的Bitmap图像，我们不想每次屏幕旋转时都重新加载这个Bitmap对象，最简单的办法就是将这个Bitmap对象使用static修饰。  
 
 ```java
-private static Drawable sBackground;
+    private static Drawable sBackground;
 
     @Override
     protected void onCreate(Bundle state) {
@@ -34,7 +34,7 @@ private static Drawable sBackground;
       label.setBackgroundDrawable(sBackground);
 
       setContentView(label);
-}
+    }
 ```
 
 但是上面的方法在屏幕旋转时有可能引起内存泄露，无论是咋一看还是仔细看这段代码，都很难发现哪里引起了内存泄露。
