@@ -32,6 +32,8 @@ public class SingleInstance {
 }
 ```
 
+<!--more-->
+
 在Java中，类的静态初始化会在类被加载时触发，我们利用这个原理，可以实现利用这一特性，结合内部类，可以实现上面的代码，进行懒汉式创建实例。
 
 关于单例，可以详细参考文章[单例这种设计模式](http://droidyue.com/blog/2015/01/11/looking-into-singleton/)
