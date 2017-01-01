@@ -8,10 +8,10 @@ categories: "Java学习笔记"
 ### 不可变的String对象
 
 在Java中,String对象是不可变的(Immutable)。在代码中，可以创建多个某一个String对象的别名。但是这些别名都是的引用是相同的。
-比如s1和s2都是”droidyue.com”对象的别名，别名保存着到真实对象的引用。所以s1 = s2
+比如s1和s2都是”vikingden.cn”对象的别名，别名保存着到真实对象的引用。所以s1 = s2
 
 ```java
-String s1 = "droidyue.com";
+String s1 = "vikingden.cn";
 String s2 = s1;
 System.out.println("s1 and s2 has the same reference =" + (s1 == s2));
 ```
