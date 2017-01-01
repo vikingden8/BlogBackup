@@ -332,7 +332,7 @@ AppManager appManager = new AppManager(); //compile error
   * 增加了dex包的大小，理论上dex包越大，加载速度越慢
   * 同时使用枚举，运行时的内存占用也会相对变大
 
-关于上面两点的验证，秋百万已经做了详细的论证，大家可以参考这篇文章[《Android 中的 Enum 到底占多少内存？该如何用？》](https://www.liaohuqiu.net/cn/posts/android-enum-memory-usage/)
+关于上面两点的验证，秋百万已经做了详细的论证，大家可以参考这篇文章[《Android 中的 Enum 到底占多少内存？该如何用？》]()
 
 关于枚举是否使用的结论，大家可以参考
 
