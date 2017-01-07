@@ -33,7 +33,7 @@ public abstract class AbstractCollection<E> implements Collection<E> {
 
 <!--more-->
 
-通过阅读AbstractCollection的DOC，其提供了对集合类操作的一些基本实现。AbstractCollection是一个实现Collection接口的抽象类、本身没有提供任何额外的方法、所有想要实现Collection接口的实现类都必须从AbstractCollection继承、他存在的意义就是大大减少编码的工作量、AbstractCollection中的方法都是从Collection接口中继承、除两个关键方法abstract Iterator iterator();abstract int size();方法外都提供了简单的实现（这里要注意add()只是抛出异常、要求子类必须去实现、因为不同数据结构添加元素的方式不一致）、其他的方法都是通过Iterator的方法来实现的、所以在子类中要实现Iterator的方法、讲到Iterator才具体列举有哪些方法、这就是此类为什么能减少代码量的原因。
+通过阅读AbstractCollection的DOC，其主要提供了对集合类操作的一些基本实现。AbstractCollection是一个实现Collection接口的抽象类、本身没有提供任何额外的方法、所有想要实现Collection接口的实现类可以从AbstractCollection继承、它存在的意义就是大大减少编码的工作量，AbstractCollection中的方法都是从Collection接口中继承，除两个关键方法iterator()和size()方法外都提供了简单的实现（这里要注意add()只是抛出异常、要求子类必须去实现、因为不同数据结构添加元素的方式不一致），其他的方法都是通过Iterator的方法来实现的，所以在子类中要实现Iterator的方法。
 
 我们看下其源码：
 
@@ -41,9 +41,14 @@ public abstract class AbstractCollection<E> implements Collection<E> {
 /**
  * 此类提供 Collection 接口的骨干实现，以最大限度地减少了实现此接口所需的工作。
  *
+ * 对于一个不可更改的集合，只要继承这个类并且实现迭代器和size()方法就行。
+ *
+ * 对于一个可更改的集合，需要实现add和返回Iterator的方法，当然可选的实现remove方法
+ *
  * 子类要继承此抽象类、
  * 1、必须提供两个构造方法、一个无参一个有参。
- * 2、必须重写抽象方法 Iterator<e> iterator();方法体中必须有hasNext()和next()两个方法、同时必须实现remove方法 用于操作集合中元素
+ * 2、必须重写抽象方法 Iterator<e> iterator();方法体中必须有hasNext()
+ *  next()两个方法、同时必须实现remove方法 用于操作集合中元素
  * 3、一般要重写add方法、否则子类调用add方法会抛UnsupportedOperationException异常。
  *
  * 子类通常要重写此类中的方法已得到更有效的实现、
@@ -69,8 +74,10 @@ public abstract class AbstractCollection<E> implements Collection<E> {
 
     /**
     * 判断是否包含指定的元素
-    * （1）如果参数为null，查找值为null的元素，如果存在，返回true，否则返回false。
-    * （2）如果参数不为null，则根据equals方法查找与参数相等的元素，如果存在，则返回true，否则返回false。
+    * （1）如果参数为null，查找值为null的元素，如果存在，返回true，
+    *  否则返回false。
+    * （2）如果参数不为null，则根据equals方法查找与参数相等的元素，
+    *  如果存在，则返回true，否则返回false。
     * 注意：这里必须对null单独处理，否则null.equals会报空指针异常
     */
     public boolean contains(Object o) {
@@ -92,8 +99,10 @@ public abstract class AbstractCollection<E> implements Collection<E> {
     * 实现：
     * （1）创建一个数组，大小为集合中元素的数量
     * （2）通过迭代器遍历集合，将当前集合中的元素复制到数组中（复制引用）
-    * （3）如果集合中元素比预期的少，则调用Arrays.copyOf()方法将数组的元素复制到新数组中，并返回新数组
-    * （4）如果集合中元素比预期的多，则调用finishToArray方法生成新数组，并返回新数组，否则返回（1）中创建的数组
+    * （3）如果集合中元素比预期的少，则调用Arrays.copyOf()
+    *  方法将数组的元素复制到新数组中，并返回新数组
+    * （4）如果集合中元素比预期的多，则调用finishToArray方法生成新数组，
+    *  并返回新数组，否则返回（1）中创建的数组
     */
     public Object[] toArray() {
         // Estimate size of array; be prepared to see more or fewer elements
@@ -110,7 +119,8 @@ public abstract class AbstractCollection<E> implements Collection<E> {
     /**  
     * 功能：通过泛型约束返回指定类型的数组
     * 实现：
-    * （1）如果传入数组的长度的长度大于等于集合的长度，则将当前集合的元素复制到传入的数组中
+    * （1）如果传入数组的长度的长度大于等于集合的长度，
+    *  则将当前集合的元素复制到传入的数组中
     * （2）如果传入数组的长度小于集合的大小，则将创建一个新的数组来进行集合元素的存储
     */
     public <T> T[] toArray(T[] a) {
@@ -151,10 +161,12 @@ public abstract class AbstractCollection<E> implements Collection<E> {
 
     /**
     * 功能：数组扩容
-    * （1）当数组索引指向最后一个元素+1时，对数组进行扩容：即创建一个更长的数组，然后将原数组的内容复制到新数组中
+    * （1）当数组索引指向最后一个元素+1时，对数组进行扩容：
+    *  即创建一个更长的数组，然后将原数组的内容复制到新数组中
     * （2）扩容大小：cap + cap/2 +1
     * （3）扩容前需要先判断是否数组长度是否溢出
-    * 注意：这里的迭代器是从上层的方法（toArray）传过来的，并且这个迭代器已执行了一部分，而不是从头开始迭代的
+    * 注意：这里的迭代器是从上层的方法（toArray）传过来的，
+    * 并且这个迭代器已执行了一部分，而不是从头开始迭代的
     */
     private static <T> T[] finishToArray(T[] r, Iterator<?> it) {
         int i = r.length;
@@ -193,8 +205,10 @@ public abstract class AbstractCollection<E> implements Collection<E> {
 
     /**
     * 功能：移除指定元素
-    * （1）如果参数为null，则找到第一个值为null的元素，并将其删除，返回true，如果不存在null的元素，返回false。
-    * （2）如果参数不为null，则根据equals方法找到第一个与参数相等的元素，并将其删除，返回true，如果找不到，返回false。
+    * （1）如果参数为null，则找到第一个值为null的元素，
+    * 并将其删除，返回true，如果不存在null的元素，返回false。
+    * （2）如果参数不为null，则根据equals方法找到第一个与参数相等的元素，
+    * 并将其删除，返回true，如果找不到，返回false。
     */
     public boolean remove(Object o) {
         Iterator<E> it = iterator();
@@ -246,7 +260,8 @@ public abstract class AbstractCollection<E> implements Collection<E> {
     * 功能：移除参数集合的元素
     * （1）获取当前集合的迭代器进行遍历
     * （2）如果当前集合中的元素包含在参数集合中，则删除当前集合中的元素  
-    * 注：只要参数集合中有任何一个元素在当前元素中，则返回true，表示当前集合有发送变化，否则返回false。
+    * 注：只要参数集合中有任何一个元素在当前元素中，
+    * 则返回true，表示当前集合有发送变化，否则返回false。
     */
     public boolean removeAll(Collection<?> c) {
         boolean modified = false;
@@ -264,7 +279,8 @@ public abstract class AbstractCollection<E> implements Collection<E> {
     * 功能：求参数集合与当前集合的交集    
     * （1）获取当前集合的迭代器进行遍历
     * （2）如果当前集合中的元素不在参数集合中，则将其移除。
-    * 注意：如果当前集合是参数集合中的子集，则返回false，表示当前集合未发送变化，否则返回true。
+    * 注意：如果当前集合是参数集合中的子集，则返回false，
+    * 表示当前集合未发送变化，否则返回true。
     */
     public boolean retainAll(Collection<?> c) {
         boolean modified = false;
@@ -293,7 +309,8 @@ public abstract class AbstractCollection<E> implements Collection<E> {
     //  String conversion
 
      /**
-     * 以字符串的方式返回该集合列表。此字符串是以其在集合中的顺序返回，字符串会以"[]"外包围。元素之间通过逗号+空格分隔，如”, "
+     * 以字符串的方式返回该集合列表。此字符串是以其在集合中的顺序返回，
+     * 字符串会以"[]"外包围。元素之间通过逗号+空格分隔，如”, "
      */
     public String toString() {
         Iterator<E> it = iterator();
@@ -328,7 +345,13 @@ public abstract class AbstractCollection<E> implements Collection<E> {
 
 也就是说有的虚拟机实现，数组对象的头部会占用这8个字节。
 
-参考资料：
+**AbstractCollection 的 add(E) 方法默认是抛出异常，这样会不会容易导致问题？为什么不定义为抽象方法**
+
+答案译自 [stackoverflow](http://stackoverflow.com/questions/23889410/why-is-add-method-not-abstract-in-abstractcollection) :
+
+* 如果你想修改一个不可变的集合时，抛出 UnsupportedOperationException 是标准的行为，比如 当你用 Collections.unmodifiableXXX() 方法对某个集合进行处理后，再调用这个集合的 修改方法（add,remove,set…），都会报这个错。因此 AbstractCollection.add(E) 抛出这个错误是遵从标准；
+
+**参考资料：**
 
 [源码分析-java-AbstractCollection](http://blog.csdn.net/u011518120/article/details/51924587)
 
