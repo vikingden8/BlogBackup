@@ -21,6 +21,8 @@ Python只有三种文件类型.py，.pyc，.pyo.
 
  ![](/images/categories/python/python-file-type/type_01.png)
 
+ <!--more-->
+
  执行之后，可以看到生成了1.pyc的文件，我们可以使用python 1.pyc执行：
 
  ![](/images/categories/python/python-file-type/type_02.png)
