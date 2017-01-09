@@ -13,7 +13,7 @@ to know the internal representation of that collection.）。
 
 ### 结构和说明
 
-![迭代器结构图](https://github.com/vikingden8/Algorithms-Patterns/blob/master/src/main/resources/iterator_diagram.png)
+![迭代器结构图](/images/categories/design-patterns/iterator_diagram.png)
 
 * Iterator : 迭代器接口，定义访问和遍历元素的接口；
 
