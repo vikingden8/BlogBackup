@@ -21,6 +21,7 @@ public interface Deque<E> extends Queue<E> {
 }
 ```
 Deque直接继承自Queue，看下Deque的所有方法：
+<!--more-->
 
 ```java
 public interface Deque<E> extends Queue<E> {
