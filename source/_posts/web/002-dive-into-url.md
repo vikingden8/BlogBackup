@@ -17,7 +17,8 @@ categories: "Web学习笔记"
 
 通常而言，我们所熟悉的 URL 的常见定义格式为：
 
-**<scheme>://<user>:<password>@<host>:<port>/<path>;<url-params>?<query-string>#<frag>**
+**&lt;scheme&gt;://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/&lt;path&gt;;&lt;url-params&gt;?&lt;query-string&gt;#&lt;frag&gt;**
+
 
   * **scheme** 访问服务器以获取资源时要使用哪种协议，比如http、https、ftp、rtsp以及著名的ed2k，迅雷的thunder等；
 
