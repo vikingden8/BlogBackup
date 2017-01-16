@@ -61,7 +61,7 @@ HTTP/1.1向协议中引入了信息性状态码。这些状态码相对较新，
 
 ![](/images/categories/web/http_status_code_33.png)
 
-### 400~499--客户端错误状态码
+#### 400~499--客户端错误状态码
 
 下面是已定义的客户端错误状态码：
 
@@ -77,6 +77,6 @@ HTTP/1.1向协议中引入了信息性状态码。这些状态码相对较新，
 
 下图是已定义的服务器错误状态码：
 
-![](/images/categories/web/http_status_code_40.png)
+![](/images/categories/web/http_status_code_50.png)
 
-![](/images/categories/web/http_status_code_41.png)
+![](/images/categories/web/http_status_code_51.png)
