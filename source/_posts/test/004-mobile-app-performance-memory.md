@@ -33,13 +33,13 @@ categories: "测试开发"
 
 通过上述指令可以查看所有应用的内存消耗情况
 
-![](/images/categories/test/04/01.png)
+![](/images/categories/test/04/01.jpg)
 
 如果想查看某一应用或某一个进程的详细的内存信息，可用如下指令：
 
 指令：adb shell dumpsys meminfo packagename or pid
 
-![](/images/categories/test/04/02.png)
+![](/images/categories/test/04/02.jpg)
 
 从上面的Heap size类别中包含Native Heap和Dalvik Heap两部分Heap，其中dalvik就是平时说的java堆，我们创建的对象都在这里分配的。其中，dalvik heap不能超过最大限制，超过最大限制就会出现OOM；
 
@@ -47,7 +47,7 @@ categories: "测试开发"
 
 指令：adb shell getprop | grep or findstr heapgrowthlimit
 
-![](/images/categories/test/04/03.png)
+![](/images/categories/test/04/03.jpg)
 
 上述查看到的单个内存最大限制为128MB，而meminfo里面dalvik heap size的最大值如果超过了128M就可能出现OOM。dalvik.vm.heapgrowthlimit和dalvik.vm.heapsize都是java虚拟机的最大内存限制，应用如果不想在dalvik heap达到heapgrowthlimit限制的时候出现OOM，需要在Manifest中的application标签中声明android：largeHeap=“true”，声明后，如果应用的dalvik heap 达到heapsize的时候才会出现OOM！另：设备不一样，最大内存的限制也可能不一样
 
@@ -59,21 +59,21 @@ C/C++申请的内存空间在native heap中，而java申请的内存空间则在
 
 查看单个应用程序最大内存限制：adb shell getprop|grep heapgrowthlimit
 
-![](/images/categories/test/04/04.png)
+![](/images/categories/test/04/04.jpg)
 
 应用启动后分配的初始内存： adb shell getprop|grep dalvik.vm.heapstartsize
 
-![](/images/categories/test/04/05.png)
+![](/images/categories/test/04/05.jpg)
 
 单个java虚拟机最大的内存限制：adb shell getprop|grep dalvik.vm.heapsize
 
-![](/images/categories/test/04/06.png)
+![](/images/categories/test/04/06.jpg)
 
 ### 使用android 提供的procrank获取即可
 
 通过指令：adb shell procrank | grep packagename
 
-![](/images/categories/test/04/07.png)
+![](/images/categories/test/04/07.jpg)
 
 通过adb shell procrank指令可以获取VSS，RSS，USS，PSS
 
@@ -89,17 +89,17 @@ C/C++申请的内存空间在native heap中，而java申请的内存空间则在
 
 其中USS只能通过procrank获取，首先网上下载libpagemap.so, procmem, procrank，然后push到android手机中。有的root机自带这几个文件，不需要额外下载。
 
-![](/images/categories/test/04/08.png)
+![](/images/categories/test/04/08.jpg)
 
 ### 通过ADT插件DDMS查看用内存MAT进行分析
 
 利用DDMS的Heap可以很方便的查看app的内存占用情况，在app运行时，打开DDMS选项，在Devices下，可以看到正在运行的App，选择要查看内存的App，点击该条目，并选择Update Heap，如下图：
 
-![](/images/categories/test/04/09.png)
+![](/images/categories/test/04/09.jpg)
 
 在Heap中，选择Cause GC，可以查看应用的占用情况，具体如下图：
 
-![](/images/categories/test/04/10.png)
+![](/images/categories/test/04/10.jpg)
 
 ### 参考资料
 
