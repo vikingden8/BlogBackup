@@ -30,15 +30,15 @@ constructor has both advantages and disadvantages.
 
 <!--more-->
 
-*One advantage of static factory methods is that, unlike constructors, they
-have names*. If the parameters to a constructor do not, in and of themselves,
+**One advantage of static factory methods is that, unlike constructors, they
+have names**. If the parameters to a constructor do not, in and of themselves,
 describe the object being returned, a static factory with a well-chosen name is easier
 to use and the resulting client code easier to read. For example, the constructor
 BigInteger(int, int, Random), which returns a BigInteger that is probably
 prime, would have been better expressed as a static factory method named BigInteger.probablePrime.
 (This method was eventually added in the 1.4 release.)
 
-*静态工厂方法与构造器不同的第一大优势在于，它们有名称*。如果构造器的参数本身没有确切地描述正被返回的对象，那么具有适当名称的静态工厂会更容易使用，产生的客户端代码也更容易阅读。例如，构造器BigInteger(int, int, Random)返回的BigInteger可能为素数，如果用名为BigInteger.probablePrime的静态工厂方法来表示，显然更为清楚（Java 1.4的发行版本最终增加了这个方法）。
+**静态工厂方法与构造器不同的第一大优势在于，它们有名称**。如果构造器的参数本身没有确切地描述正被返回的对象，那么具有适当名称的静态工厂会更容易使用，产生的客户端代码也更容易阅读。例如，构造器BigInteger(int, int, Random)返回的BigInteger可能为素数，如果用名为BigInteger.probablePrime的静态工厂方法来表示，显然更为清楚（Java 1.4的发行版本最终增加了这个方法）。
 
 A class can have only a single constructor with a given signature. Programmers
 have been known to get around this restriction by providing two constructors
@@ -57,8 +57,8 @@ methods and carefully chosen names to highlight their differences.
 
 由于静态工厂方法有名称，所以它们不受上述的限制。当一个类需要多个带有相同签名的构造器时，就用静态工厂方法替代构造器，并且慎重地选择名称以便突出它们之间的区别。
 
-*A second advantage of static factory methods is that, unlike constructors,
-they are not required to create a new object each time they’re invoked*. This
+**A second advantage of static factory methods is that, unlike constructors,
+they are not required to create a new object each time they’re invoked**. This
 allows immutable classes (Item 15) to use preconstructed instances, or to cache
 instances as they’re constructed, and dispense them repeatedly to avoid creating
 unnecessary duplicate objects. The Boolean.valueOf(boolean) method illustrates
@@ -66,7 +66,7 @@ this technique: it never creates an object. This technique is similar to the
 Flyweight pattern [Gamma95, p. 195]. It can greatly improve performance if
 equivalent objects are requested often, especially if they are expensive to create.
 
-*静态工厂方法与构造器的第二大优势在于，不必在每次调用它们的时候都创建一个新对象*。这使得不可变类[见第15条]可以使用预先构建好的实例，或者将构建好的实例缓存起来，进行重复利用，从而避免创建不必要的重复对象。Boolean.valueOf(boolean)方法说明了这项技术：它从不创建对象。这样方法类似于Flyweigh模式[Gamma95, p. 195]。如果程序经常请求创建相同的对象，并且创建对象的代价很高，则这项技术可以极大地提升性能。
+**静态工厂方法与构造器的第二大优势在于，不必在每次调用它们的时候都创建一个新对象**。这使得不可变类[见第15条]可以使用预先构建好的实例，或者将构建好的实例缓存起来，进行重复利用，从而避免创建不必要的重复对象。Boolean.valueOf(boolean)方法说明了这项技术：它从不创建对象。这样方法类似于Flyweigh模式[Gamma95, p. 195]。如果程序经常请求创建相同的对象，并且创建对象的代价很高，则这项技术可以极大地提升性能。
 
 The ability of static factory methods to return the same object from repeated
 invocations allows classes to maintain strict control over what instances exist at
@@ -80,11 +80,11 @@ result in improved performance. Enum types (Item 30) provide this guarantee.
 
 静态工厂方法能够为重复的调用返回相同对象，这样有助于类总能严格控制在某个时刻哪些实例应该存在。这种类被称作实例受控的类。编写实例受控的类有几个原因：实例受控使得类可以确保它是一个Singleton[见第三条]或者是不可实例化的[见第4条]。它还使得不可变的类[见第15条]可以确保不会存在两个相等的实例，即当且仅当a==b的时候才有a.equals(b).如果类保证了这一点，它的客户端就可以使用==操作符来替代equals(Object)方法，这样可以提升性能。枚举（Enum）类型[见第30条]保证了这一点。
 
-*A third advantage of static factory methods is that, unlike constructors,
-they can return an object of any subtype of their return type*. This gives you
+**A third advantage of static factory methods is that, unlike constructors,
+they can return an object of any subtype of their return type**. This gives you
 great flexibility in choosing the class of the returned object.
 
-*静态工厂方法与构造器不同的第三大优势在于，它们可以返回原返回类型的任何子类型的对象*。这样我们在选择返回对象的类时就有了更大的灵活性。
+**静态工厂方法与构造器不同的第三大优势在于，它们可以返回原返回类型的任何子类型的对象**。这样我们在选择返回对象的类时就有了更大的灵活性。
 
 
 One application of this flexibility is that an API can return objects without
@@ -217,13 +217,13 @@ public class Services {
 }
 
 ```
-*A fourth advantage of static factory methods is that they reduce the verbosity
-of creating parameterized type instances*. Unfortunately, you must specify
+**A fourth advantage of static factory methods is that they reduce the verbosity
+of creating parameterized type instances**. Unfortunately, you must specify
 the type parameters when you invoke the constructor of a parameterized class
 even if they’re obvious from context. This typically requires you to provide the
 type parameters twice in quick succession:
 
-*静态工厂方法的第四大优势在于，在创建参数化类型实例的时候，它们使代码变得更加简单*。遗憾的是，在调用参数化类的构造器时，即使类型参数很明显，也必须指明。这通常要求你接连两次提供类型参数：
+**静态工厂方法的第四大优势在于，在创建参数化类型实例的时候，它们使代码变得更加简单**。遗憾的是，在调用参数化类的构造器时，即使类型参数很明显，也必须指明。这通常要求你接连两次提供类型参数：
 
 ```java
 Map<String, List<String>> m =
@@ -262,17 +262,17 @@ own parameterized classes.
 
 遗憾的是，到发行版本1.6为止，标准的集合实现如HashMap并没有工厂方法，但是可以把这些方法放在你自己的工具类中。更重要的是，可以把这样的静态工厂放在你自己的参数化的类中。
 
-*The main disadvantage of providing only static factory methods is that
-classes without public or protected constructors cannot be subclassed*. The
+**The main disadvantage of providing only static factory methods is that
+classes without public or protected constructors cannot be subclassed**. The
 same is true for nonpublic classes returned by public static factories. For example,
 it is impossible to subclass any of the convenience implementation classes in the
 Collections Framework. Arguably this can be a blessing in disguise, as it encourages
 programmers to use composition instead of inheritance (Item 16).
 
-*静态工厂方法的主要缺点在于，类如果不含公有的或者受保护的构造器，就不能被子类化*。对于公有的静态工厂所返回的非公有类，也同样如此。例如，要想将Collections Framework中的任何方便的实现类子类化，这是不可能的。但是这样也许会因祸得福，因为它鼓励程序员使用复合，而不是继承[见第16条]。
+**静态工厂方法的主要缺点在于，类如果不含公有的或者受保护的构造器，就不能被子类化**。对于公有的静态工厂所返回的非公有类，也同样如此。例如，要想将Collections Framework中的任何方便的实现类子类化，这是不可能的。但是这样也许会因祸得福，因为它鼓励程序员使用复合，而不是继承[见第16条]。
 
-*A second disadvantage of static factory methods is that they are not
-readily distinguishable from other static methods*. They do not stand out in API
+**A second disadvantage of static factory methods is that they are not
+readily distinguishable from other static methods**. They do not stand out in API
 documentation in the way that constructors do, so it can be difficult to figure out
 how to instantiate a class that provides static factory methods instead of constructors.
 The Javadoc tool may someday draw attention to static factory methods. In
@@ -280,7 +280,7 @@ the meantime, you can reduce this disadvantage by drawing attention to static fa
 in class or interface comments, and by adhering to common naming conventions.
 Here are some common names for static factory methods:
 
-*静态工厂方法的第二个缺点在于，它们与其他的静态方法实际上没有任何区别*。在API文档中，它们没有像构造器那样在API文档中明确标识出来，因此，对于提供了静态工厂方法而不是构造器的类来说，要想查明如何实例化一个类，这是非常困难的.javadoc工具总有一天会注意到静态工厂方法。同时，你通过在类或者接口注释中关注静态工厂，并遵守标准的命名习惯，也可以弥补这一劣势。下面是静态工厂方法的一些惯用名称：
+**静态工厂方法的第二个缺点在于，它们与其他的静态方法实际上没有任何区别**。在API文档中，它们没有像构造器那样在API文档中明确标识出来，因此，对于提供了静态工厂方法而不是构造器的类来说，要想查明如何实例化一个类，这是非常困难的.javadoc工具总有一天会注意到静态工厂方法。同时，你通过在类或者接口注释中关注静态工厂，并遵守标准的命名习惯，也可以弥补这一劣势。下面是静态工厂方法的一些惯用名称：
 
   * valueOf—Returns an instance that has, loosely speaking, the same value as its
 parameters. Such static factories are effectively type-conversion methods.
