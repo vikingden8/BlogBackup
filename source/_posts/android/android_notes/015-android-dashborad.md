@@ -5,7 +5,7 @@ tags:
 categories: "Android学习笔记"
 ---
 
-Android Dashboards网站上提供了过去七天访问Google Play应用商店的设备信息，这个信息对开发Android应用程序的开发者能提供支持多设备的参考。其实，这个要是根据Google Play的访问来统计的话，觉得中国的大部分设备信息都没有统计进去，有失准。
+Android Dashboards网站上提供了过去七天访问Google Play应用商店的设备信息，这个信息对开发Android应用程序的开发者能提供支持多设备的参考。其实，这个是根据Google Play的访问来统计的话，觉得中国的大部分设备信息都没有统计进去，有失准。
 
 官网主要是通过三个方面来统计：平台版本、屏幕大小和分辨率、Open GL版本
 

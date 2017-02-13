@@ -6,12 +6,14 @@ categories: "Effective Java"
 
 The normal way for a class to allow a client to obtain an instance of itself is to provide a public constructor. There is another technique that should be a part of every programmer’s toolkit. A class can provide a public static factory method, which is simply a static method that returns an instance of the class. Here’s a simple example from Boolean (the boxed primitive class for the primitive type boolean). This method translates a boolean primitive value into a Boolean object reference:
 
-对于类而言，为了让客户端获取它自身的一个实例，最常用的方法就是提供一个共有的构造器。还有一种方法，也应该在每个程序员的工具箱中占有一席之地。类可以提供一个共有的静态工厂方法，它只是一个返回类的实例的静态方法。下面是一个来自Boolean（基本数据类型boolean的包装类）的简单示例。这个方法将boolean基本类型值转换成了一个Boolean对象引用：
+对于类而言，为了让客户端获取它自身的一个实例，最常用的方法就是提供一个公有的构造器。还有一种方法，也应该在每个程序员的工具箱中占有一席之地。类可以提供一个公有的静态工厂方法，它只是一个返回类的实例的静态方法。下面是一个来自Boolean（基本数据类型boolean的包装类）的简单示例。这个方法将boolean基本类型值转换成了一个Boolean对象引用：
 
 ```java
-public static Boolean valueOf(boolean b) {
-  return b ? Boolean.TRUE : Boolean.FALSE;
-}
+
+    public static Boolean valueOf(boolean b) {
+      return b ? Boolean.TRUE : Boolean.FALSE;
+    }
+
 ```
 
 Note that a static factory method is not the same as the Factory Method pattern
@@ -24,7 +26,7 @@ A class can provide its clients with static factory methods instead of, or in
 addition to, constructors. Providing a static factory method instead of a public
 constructor has both advantages and disadvantages.
 
-类可以通过静态工厂方法来提供给它的客户端，而不是通过构造器。提供静态工厂方法而不是共有的构造器，这样做有优点也有缺点。
+类可以通过静态工厂方法来提供给它的客户端，而不是通过构造器。提供静态工厂方法而不是公有的构造器，这样做有优点也有缺点。
 
 <!--more-->
 
@@ -92,7 +94,7 @@ a very compact API. This technique lends itself to interface-based frameworks
 Interfaces can’t have static methods, so by convention, static factory methods for
 an interface named Type are put in a noninstantiable class (Item 4) named Types.
 
-这种灵活性的一种应用是，API可以返回对象，同时又不会使对象的类变成共有的。以这种方式隐藏实现类会使API变得十分简洁。这项技术适用于基于接口的框架[见第18条]，因为在这种框架中，接口为静态工厂方法提供了自然返回类型。接口不能有静态方法，因此，按照惯例，接口Type的静态工厂方法被放在一个名为Types的不可实例化的类[见第4条]中。
+这种灵活性的一种应用是，API可以返回对象，同时又不会使对象的类变成公有的。以这种方式隐藏实现类会使API变得十分简洁。这项技术适用于基于接口的框架[见第18条]，因为在这种框架中，接口为静态工厂方法提供了自然返回类型。接口不能有静态方法，因此，按照惯例，接口Type的静态工厂方法被放在一个名为Types的不可实例化的类[见第4条]中。
 
 For example, the Java Collections Framework has thirty-two convenience
 implementations of its collection interfaces, providing unmodifiable collections,
@@ -111,7 +113,7 @@ implementation classes. Furthermore, using such a static factory method requires
 the client to refer to the returned object by its interface rather than its implementation
 class, which is generally good practice (Item 52).
 
-现在的Collections Framework API比提供32个独立共有类的那种实现方式要小得多，每种便利实现都去对应一个类。这不仅仅是指API数量上的减少，也是概念意义上的减少。用户知道，被返回的对象是由相关的接口精确指定的，所以他们不需要阅读有关的类文档。使用这种静态工厂方法时，甚至要求客户端通过接口来引用被返回的对象，而不是通过它的实现类来引用被返回的对象，这是一种良好的习惯[见第52条]。
+现在的Collections Framework API比提供32个独立公有类的那种实现方式要小得多，每种便利实现都去对应一个类。这不仅仅是指API数量上的减少，也是概念意义上的减少。用户知道，被返回的对象是由相关的接口精确指定的，所以他们不需要阅读有关的类文档。使用这种静态工厂方法时，甚至要求客户端通过接口来引用被返回的对象，而不是通过它的实现类来引用被返回的对象，这是一种良好的习惯[见第52条]。
 
 Not only can the class of an object returned by a public static factory method
 be nonpublic, but the class can vary from invocation to invocation depending on
@@ -119,7 +121,7 @@ the values of the parameters to the static factory. Any class that is a subtype 
 declared return type is permissible. The class of the returned object can also vary
 from release to release for enhanced software maintainability and performance.
 
-共有的静态工厂方法所返回的对象的类不仅可以是非公有的，而且该类还可以随着每次调用而发生变化，这取决于静态工厂方法的参数值。只要是已声明的返回类型的子类型，都是允许的。为了提升软件的可维护性和性能，返回对象的类也可以随着发行版本的不同而不同。
+公有的静态工厂方法所返回的对象的类不仅可以是非公有的，而且该类还可以随着每次调用而发生变化，这取决于静态工厂方法的参数值。只要是已声明的返回类型的子类型，都是允许的。为了提升软件的可维护性和性能，返回对象的类也可以随着发行版本的不同而不同。
 
 The class java.util.EnumSet (Item 32), introduced in release 1.5, has no
 public constructors, only static factories. They return one of two implementations,
@@ -278,7 +280,7 @@ the meantime, you can reduce this disadvantage by drawing attention to static fa
 in class or interface comments, and by adhering to common naming conventions.
 Here are some common names for static factory methods:
 
-*静态工厂方法的第二个缺点在于，它们与其他的静态方法实际上没有任何区别*。在API文档中，它们没有像构造器那样在API文档中明确标识出来，因此，对于提供了静态工厂方法而不是构造器的类来说，要想查明如何实例化一个类，这是非常困难的.javadoc工具总有一天会注意到静态工厂方法。同时，你通过在类或者接口注释中关注静态工厂，并遵守标准的命名习惯，也可以弥补这一劣势。下民是静态工厂方法的一些惯用名称：
+*静态工厂方法的第二个缺点在于，它们与其他的静态方法实际上没有任何区别*。在API文档中，它们没有像构造器那样在API文档中明确标识出来，因此，对于提供了静态工厂方法而不是构造器的类来说，要想查明如何实例化一个类，这是非常困难的.javadoc工具总有一天会注意到静态工厂方法。同时，你通过在类或者接口注释中关注静态工厂，并遵守标准的命名习惯，也可以弥补这一劣势。下面是静态工厂方法的一些惯用名称：
 
   * valueOf—Returns an instance that has, loosely speaking, the same value as its
 parameters. Such static factories are effectively type-conversion methods.
