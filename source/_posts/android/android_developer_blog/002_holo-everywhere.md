@@ -115,3 +115,7 @@ You can go as far with this idea as you like, up to and including defining your 
 ### Final Thoughts
 
 Android apps running on 4.0 and forward can use the Holo themes and be assured that their look and feel will not change when running on a device with a custom skin. Apps that wish to use the device’s default styling can do so using the DeviceDefault themes that are now in the public API. These changes let you spend more time on your design and less time worrying about what will be different from one device to another. Finally, Android’s resource system allows you to support features from the latest platform version while offering graceful fallback on older devices.
+
+### References
+
+[Holo Everywhere](https://android-developers.googleblog.com/2012/01/holo-everywhere.html)
