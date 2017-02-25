@@ -2,7 +2,7 @@
 title: Android卡顿性能监测方案对比
 date: 2017-02-23 21:51:57
 tags:
-categories: "Android自动化"
+categories: "移动性能测试"
 ---
 
 ### 前言

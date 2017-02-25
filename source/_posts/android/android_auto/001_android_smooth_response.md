@@ -2,7 +2,7 @@
 title: 量化和优化用户与 Android 设备之间的交互
 date: 2017-1-5 11:20:07
 tags:
-categories: "Android性能"
+categories: "移动性能测试"
 ---
 
 ### 摘要

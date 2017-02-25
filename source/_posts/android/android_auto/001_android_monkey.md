@@ -2,7 +2,7 @@
 title: Android自动化-Monkey源码分析之运行流程
 date: 2017-1-17 16:32:32
 tags:
-categories: "Android自动化"
+categories: "移动性能测试"
 ---
 
 在使用monkey时，我们在命令行窗口一般是输入adb shell monkey xxx，可知这执行的流程是怎样？
