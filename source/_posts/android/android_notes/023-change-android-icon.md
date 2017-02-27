@@ -148,7 +148,7 @@ OK了，禁用默认的Activity后，启用双11的activity-alias，结果不变
 
 效果如下图：
 
-[](/images/categories/android/android_notes/023/dynamic_change_icon.gif)
+![](/images/categories/android/android_notes/023/dynamic_change_icon.gif)
 
 
 转载自：[上次发版我就改了一行代码！](http://blog.csdn.net/eclipsexys/article/details/53791818)
