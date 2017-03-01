@@ -1,5 +1,5 @@
 ---
-title: Android Studio: An IDE built for Android
+title: Android Studio An IDE built for Android
 date: 2017-03-01 21:55:59
 tags:
 categories: "Android官方博客"
