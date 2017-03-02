@@ -124,7 +124,7 @@ for i in range(10):
 **pythonic**
 
 ```python
-[i2 for i in xrange(10)]
+[i+2 for i in xrange(10)]
 ```
 
 与之类似的还有生成器表达式、字典推导式，都是很 pythonic 的写法。
