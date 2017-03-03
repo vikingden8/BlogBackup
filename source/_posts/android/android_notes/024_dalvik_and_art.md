@@ -1,5 +1,5 @@
 ---
-title: 动态更换应用图标
+title: ART and Dalvik
 date: 2017-3-3 10:20:37
 tags:
 categories: "Android学习笔记"
