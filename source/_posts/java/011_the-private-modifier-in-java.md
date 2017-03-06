@@ -5,6 +5,7 @@ tags:
 categories: "Java学习笔记"
 ---
 
+
 在Java编程中，使用private关键字修饰了某个成员，只有这个成员所在的类和这个类的方法可以使用，其他的类都无法访问到这个private成员。
 
 上面描述了private修饰符的基本职能，今天来研究一下private功能失效的情况。
