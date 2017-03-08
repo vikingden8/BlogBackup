@@ -139,7 +139,7 @@ In this article, let us review the Linux filesystem structures and understand th
 
   * For example, /srv/cvs contains CVS related data.
 
-### resources
+### Resources
 
   * [Linux Directory Structure (File System Structure) Explained with Examples](http://www.thegeekstuff.com/2010/09/linux-file-system-structure/)
 
