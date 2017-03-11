@@ -24,7 +24,7 @@ To enable the fused location provider to retrieve a precise street address, set 
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
   ...
 ```
-<!--more-->
+<!--more-->017
 
 ### Define an intent service to fetch the address
 
