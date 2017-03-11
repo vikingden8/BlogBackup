@@ -11,6 +11,8 @@ The [Google Play services location APIs](https://developers.google.com/android/r
 
 This class shows you how to use the Google Play services location APIs in your app to get the current location, get periodic location updates, and look up addresses. The class includes sample apps and code snippets that you can use as a starting point for adding location awareness to your app.
 
+<!--more-->
+
 >Note: Since this class is based on the Google Play services client library, make sure you install the latest version before using the sample apps or code snippets. To learn how to set up the client library with the latest version, see [Setup](https://developers.google.com/android/guides/setup) in the Google Play services guide.
 
 ## Lessons
