@@ -84,4 +84,4 @@ public class MainActivity extends ActionBarActivity implements
 
 The _getLastLocation()_ method returns a _Location_ object from which you can retrieve the latitude and longitude coordinates of a geographic location. The location object returned may be null in rare cases when the location is not available.
 
-The next lesson, [Changing Location Settings], shows you how to detect the current location settings, and prompt the user to change settings as appropriate for your app's requirements.
+The next lesson, [Changing Location Settings](https://developer.android.com/training/location/change-location-settings.html), shows you how to detect the current location settings, and prompt the user to change settings as appropriate for your app's requirements.
