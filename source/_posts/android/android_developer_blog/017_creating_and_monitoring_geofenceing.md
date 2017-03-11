@@ -9,7 +9,7 @@ Geofencing combines awareness of the user's current location with awareness of t
 
 You can have multiple active geofences, with a limit of 100 per device user. For each geofence, you can ask Location Services to send you entrance and exit events, or you can specify a duration within the geofence area to wait, or dwell, before triggering an event. You can limit the duration of any geofence by specifying an expiration duration in milliseconds. After the geofence expires, Location Services automatically removes it.
 
-![](/images/categories/android-developer-blog/017/android-geofence.png)
+![](/images/categories/android/android-developer-blog/017/android-geofence.png)
 
 This lesson shows you how to add and remove _geofences_, and then listen for _geofence_ transitions using an _IntentService_.
 
