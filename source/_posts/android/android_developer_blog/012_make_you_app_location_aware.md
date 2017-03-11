@@ -17,22 +17,22 @@ This class shows you how to use the Google Play services location APIs in your a
 
 ## Lessons
 
-#### [Getting the Last Known Location]()
+#### [Getting the Last Known Location](https://vikingden.cn/2017/03/11/android-android-developer-blog-013-getting-the-lasting-known-location/)
 
 Learn how to retrieve the last known location of an Android device, which is usually equivalent to the user's current location.
 
-#### [Changing Location Settings]()
+#### [Changing Location Settings](https://vikingden.cn/2017/03/11/android-android-developer-blog-014-changing-location-settings/)
 
 Learn how to detect and apply system settings for location features.
 
-#### [Receiving Location Updates]()
+#### [Receiving Location Updates](https://vikingden.cn/2017/03/11/android-android-developer-blog-015-receiving-location-updates/)
 
 Learn how to request and receive periodic location updates.
 
-#### [Displaying a Location Address]()
+#### [Displaying a Location Address](https://vikingden.cn/2017/03/11/android-android-developer-blog-016-displaying-a-location-address/)
 
 Learn how to convert a location's latitude and longitude into an address (reverse geocoding).
 
-#### [Creating and Monitoring Geofences]()
+#### [Creating and Monitoring Geofences](https://vikingden.cn/2017/03/11/android-android-developer-blog-017-creating-and-monitoring-geofenceing/)
 
 Learn how to define one or more geographic areas as locations of interest, called geofences, and detect when the user is close to or inside a geofence.
