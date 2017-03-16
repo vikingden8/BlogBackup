@@ -15,6 +15,8 @@ This means that if you are using the hidden SMS APIs on previous platform versio
 
 ![](/images/categories/android/android-developer-blog/020/defaultSmsApp.png)
 
+<!--more-->
+
 ### Make your app the default SMS app
 
 On Android 4.4, only one app can receive the new SMS_DELIVER_ACTION intent, which the system broadcasts when a new SMS message arrives. Which app receives this broadcast is determined by which app the user has selected as the default SMS app in system settings. Likewise, only the default SMS app receives the new WAP_PUSH_DELIVER_ACTION intent when a new MMS arrives.
