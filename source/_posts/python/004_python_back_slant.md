@@ -9,10 +9,10 @@ categories: "Python学习笔记"
 
 Python语句中，一般使用换行分隔，也就是一行一个语句。一行过长的语句可以使用反斜杠(\)分解成几行，如下例：
 
-![](/images/categories/python/004/01.png)
+![](/images/categories/python/004/1.png)
 
 有两种例外情况一个语句不使用反斜线也可以跨行。一是在使用闭合操作符时，单一语句可以跨多行，例如：在含有小括号、中括号、花括号时可以多行书写。二是三引号包括下的字符串也可以跨行书写，如下：
 
-![](/images/categories/python/004/02.png)
+![](/images/categories/python/004/2.png)
 
 >如果要在使用反斜线换行和使用括号元素换行两者之间作一个选择，推荐使用括号，这样可读性会更好
