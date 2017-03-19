@@ -23,7 +23,6 @@ categories: "Python学习笔记"
 3、国际化：也许你也曾看到“\_”会被作为一个函数来使用。这种情况下，它通常用于实现国际化和本地化字符串之间翻译查找的函数名称，这似乎源自并遵循相应的C约定。例如，在Django文档“转换”章节中，你将能看到如下代码：
 
 ```python
-Python
 from django.utils.translation import ugettext as _
 from django.http import HttpResponse
 def my_view(request):
