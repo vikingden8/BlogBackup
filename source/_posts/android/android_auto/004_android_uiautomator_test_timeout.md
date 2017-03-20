@@ -9,9 +9,9 @@ categories: "移动性能测试"
 
 最近的使用UiAutomator2.0执行的自动化case时，错误率较高，尤其是单个执行时长比较长的Case，出现问题的Case log信息：
 
-![](/images/categories/android/android-performance/1.png)
+![](/images/categories/android/android-performance/003/1.png)
 
-![](/images/categories/android/android-performance/2.png)
+![](/images/categories/android/android-performance/003/2.png)
 
 通过上述的两个相邻Case执行的log发现，UiAutomator2.0的执行case的超时时间为5分钟。
 
