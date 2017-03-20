@@ -31,7 +31,7 @@ categories: "移动性能测试"
 
 ```shell
 adb shell am instrument -w -e class com.android.foo.FooTest#testFoo \
-com.android.foo/android.support.test.runner.AndroidJUnitRunner
+com.android.foo/android.support.test.runner.AndroidJUnitRunner -e timeout_msec 50000
 ```
 
 #### Test注解
@@ -54,7 +54,7 @@ public class TimeoutTest {
 
 >注意：当在测试Case上通过注解设置timeout时，只对当前的测试方法有效。
 
-#### \@Rule
+#### @Rule
 
 因为AndroidJUnitRunner也是基于JUnit的，所以也可以通过注解的方式设置。其实如何设置也在上面的Android官方文档有说明，因为现在一般是基于JUnit4，这里只对JUnit4的情况说明。
 
