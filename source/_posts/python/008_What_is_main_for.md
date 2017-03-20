@@ -5,7 +5,7 @@ tags:
 categories: "Python学习笔记"
 ---
 
-The if \__name__ == "\__main__": ... trick exists in Python so that our Python files can act as either **reusable modules**, or as **standalone programs**. As a toy example, let’s say that we have two files:
+The if \__name__ == \"\__main__": ... trick exists in Python so that our Python files can act as either **reusable modules**, or as **standalone programs**. As a toy example, let’s say that we have two files:
 
 ![](/images/categories/python/008/1.png)
 
@@ -19,4 +19,4 @@ But we can also use mymath.py as a module; let’s see what happens when we run 
 
 ![](/images/categories/python/008/3.png)
 
-Notice that here we don’t see the ‘test’ line that mymath.py had near the bottom of its code. That’s because, in this context, mymath is not the main program. That’s what the if \__name__ == "\__main__": ... trick is used for.
+Notice that here we don’t see the ‘test’ line that mymath.py had near the bottom of its code. That’s because, in this context, mymath is not the main program. That’s what the if \__name__ == \"\__main__": ... trick is used for.
