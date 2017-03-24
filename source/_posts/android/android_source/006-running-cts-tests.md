@@ -17,6 +17,7 @@ To run a test plan:
 
   * While a device is running tests, it must not be used for any other tasks and must be kept in a stationary position (to avoid triggering sensor activity) with the cameras pointing at an object that could be focused.
 
+<!--more-->
   * Do not press any keys on the device while the CTS is running. Pressing keys or touching the screen of a test device will interfere with the running tests and may lead to test failures.
 
   * Launch the CTS console by running the cts-tradefed script from the folder where the CTS package has been unzipped, e.g. $ _./android-cts/tools/cts-tradefed_
