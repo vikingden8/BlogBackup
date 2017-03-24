@@ -2,7 +2,7 @@
 title: Android Compatibility
 date: 2017-03-24 21:34:37
 tags:
-categories: "Android Source Website"
+categories: "Android Sources Website"
 ---
 
 Android's purpose is to establish an open platform for developers to build innovative apps.
@@ -20,6 +20,8 @@ Android的目标是为开发者建立一个开放平台来创造出具有创新�
   * Google Play shows applications only to those devices that can properly run those applications.
 
   Google Play只会在运行正常的兼容性程序设备上提供应用市场功能。
+
+<!--more-->
 
 ### Why build compatible Android devices?
 
