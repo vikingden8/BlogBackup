@@ -39,11 +39,11 @@ The Test Summary section provides executed test plan details, like the CTS plan 
 
   CTS v1 sample test summary
 
-  ![](cts-test-summary.png)
+  ![](/images/categories/android/android-sources/007/cts-test-summary.png)
 
   CTS v2 sample test summary
 
-  ![](cts-v2-test-summary.png)
+  ![](/images/categories/android/android-sources/007/cts-v2-test-summary.png)
 
 ### Test Report
 
@@ -55,12 +55,12 @@ Further, the stack trace of the failure is available in the XML file but is not 
 
   CTS v1 sample test report
 
-  ![](cts-test-report.png)
+  ![](/images/categories/android/android-sources/007/cts-test-report.png)
 
   CTS v2 sample test report
 
-  ![](cts-v2-test-report.png)
+  ![](/images/categories/android/android-sources/007/cts-v2-test-report.png)
 
 ### Reviewing test_result.xml for incomplete test modules
 
-To determine the number of incomplete modules in a given test session, run command 'list results'. The count of Modules Completed and Total Modules are listed for each previous session. To determine which modules are complete vs. incomplete, open the test_result.xml file and read the value of the "done" attribute for each module in the result report. Modules with value done = "false" have not run to completion.
+To determine the number of incomplete modules in a given test session, run command 'list results'. The count of Modules Completed and Total Modules are listed for each previous session. To determine which modules are complete vs. incomplete, open the _test_result.xml_ file and read the value of the "done" attribute for each module in the result report. Modules with value done = "false" have not run to completion.

@@ -20,7 +20,7 @@ To run a test plan:
 <!--more-->
   * Do not press any keys on the device while the CTS is running. Pressing keys or touching the screen of a test device will interfere with the running tests and may lead to test failures.
 
-  * Launch the CTS console by running the cts-tradefed script from the folder where the CTS package has been unzipped, e.g. $ _./android-cts/tools/cts-tradefed_
+  * Launch the CTS console by running the cts-tradefed script from the folder where the CTS package has been unzipped, e.g. _$./android-cts/tools/cts-tradefed_
 
   * Start the default test plan (contains all test packages) by appending: _run cts --plan CTS_ . This kicks off all CTS tests required for compatibility.
 
