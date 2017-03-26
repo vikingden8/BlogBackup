@@ -5,15 +5,14 @@ tags:
 categories: "Android学习笔记"
 ---
 
-在ADB的文档 _[platform/system/core/adb/OVERVIEW.TXT](https://android.googlesource.com/platform/system/core/+/android-4.4_r1/adb/OVERVIEW.TXT)_ 介绍中，有提到这样一段：
+在ADB的文档 [platform/system/core/adb/OVERVIEW.TXT](https://android.googlesource.com/platform/system/core/+/android-4.4_r1/adb/OVERVIEW.TXT) 介绍中，有提到这样一段：
 
 > An ADB transport models a connection between the ADB server and one device
     or emulator. There are currently two kinds of transports:
 
 >   - USB transports, for physical devices through USB
 
->   - Local transports, for emulators running on the host, connected to
-         the server through TCP
+>   - Local transports, for emulators running on the host, connected to the server through TCP
 
 也就是说当前adb支持两种传输机制，第一种是USB传输，即通过USB连接的物理设备；另一种使用本地传输，比如模拟器使用的是TCP传输。
 
@@ -21,7 +20,7 @@ categories: "Android学习笔记"
 
 <!--more-->
 
-首先看下这段源代码，出自 _[platform/system/core/adb/adb.c](https://android.googlesource.com/platform/system/core/+/android-4.4_r1/adb/adb.c)_ :
+首先看下这段源代码，出自 [platform/system/core/adb/adb.c](https://android.googlesource.com/platform/system/core/+/android-4.4_r1/adb/adb.c) :
 
 ```c
 int usb = 0;
@@ -49,7 +48,7 @@ if (sscanf(value, "%d", &port) == 1 && port > 0) {
 
 从上面的源代码可以看出，如果有USB设备存在，则使用USB作为连接方式；然后再判断是否有设置 _service.adb.tcp.port_ ,如果设置了，则使用TCP作为连接方式。如果没有设置，并且没有USB设备存在，则选择默认的TCP连接方式。
 
-其中USB_ADB_PATH，USB_FFS_ADB_EP0， DEFAULT_ADB_LOCAL_TRANSPORT_PORT 在 _[platform/system/core/adb/adb.h](https://android.googlesource.com/platform/system/core/+/android-4.4_r1/adb/adb.h)_ 有定义：
+其中USB_ADB_PATH，USB_FFS_ADB_EP0， DEFAULT_ADB_LOCAL_TRANSPORT_PORT 在 [platform/system/core/adb/adb.h](https://android.googlesource.com/platform/system/core/+/android-4.4_r1/adb/adb.h) 有定义：
 
 ```c
 ...
@@ -78,6 +77,8 @@ start adbd
 
 然后，就可以在HOST主机上通过下列命令来连接设备了：
 
+```sh
 adb connect <ip-of-device>:6666
+```
 
 >注：需保证HOST主机和设备在同一个网段，执行上述命令之后就可以通过无USB的方式操作设备了，跟通过USB的连接方式无异。
