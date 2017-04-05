@@ -2,7 +2,7 @@
 title: Application security
 date: 2017-04-05 21:56:22
 tags:
-categories: "Android学习笔记"
+categories: "Android Sources Website"
 ---
 
 ### Elements of Applications

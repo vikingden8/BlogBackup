@@ -2,7 +2,7 @@
 title: System and kernel security
 date: 2017-04-05 21:40:28
 tags:
-categories: "Android学习笔记"
+categories: "Android Sources Website"
 ---
 
 At the operating system level, the Android platform provides the security of the Linux kernel, as well as a secure inter-process communication (IPC) facility to enable secure communication between applications running in different processes. These security features at the OS level ensure that even native code is constrained by the Application Sandbox. Whether that code is the result of included application behavior or an exploitation of an application vulnerability, the system is designed to prevent the rogue application from harming other applications, the Android system, or the device itself. See [Kernel Configuration for measures](http://source.android.com/devices/tech/config/kernel.html) you can take to strengthen the kernel on your devices. See the Android Compatibility Definition Document (CDD) for required settings.

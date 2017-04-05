@@ -2,7 +2,7 @@
 title: Android Security
 date: 2017-04-05 21:18:28
 tags:
-categories: "Android学习笔记"
+categories: "Android Sources Website"
 ---
 
 Android incorporates industry-leading security features and works with developers and device implementers to keep the Android platform and ecosystem safe. A robust security model is essential to enable a vigorous ecosystem of applications and devices built on and around the Android platform and supported by cloud services. As a result, through its entire development lifecycle, Android has been subject to a rigorous security program.
