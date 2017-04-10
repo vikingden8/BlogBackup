@@ -5,7 +5,7 @@ tags:
 categories: "Android学习笔记"
 ---
 
-Anyone who begins developing android application sees this message on logcat **“Choreographer(abc): Skipped xx frames! The application may be doing too much work on its main thread.”** So what does it actually means, why should you be concerned and how to solve it.
+Anyone who begins developing andro40-How-to-calculation-android-app-lunch-timeid application sees this message on logcat **“Choreographer(abc): Skipped xx frames! The application may be doing too much work on its main thread.”** So what does it actually means, why should you be concerned and how to solve it.
 
 What this means is that your code is taking long to process and frames are being skipped because of it, It maybe because of some heavy processing that you are doing at the heart of your application or DB access or any other thing which causes the thread to stop for a while. Here is a more detailed explanation –
 

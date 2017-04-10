@@ -42,7 +42,7 @@ WaitTime: 365
 
 “_adb shell am start -W_ ”的实现在 _frameworks\base\cmds\am\src\com\android\commands\am\Am.java_ 文件中。其实就是跨Binder调用 _ActivityManagerService.startActivityAndWait()_ 接口（后面将ActivityManagerService简称为AMS），这个接口返回的结果包含上面打印的ThisTime、TotalTime时间.
 
-  ![](1.png)
+  ![](/images/categories/android/android_notes/040/1.png)
 
   * startTime记录的刚准备调用startActivityAndWait()的时间点
 
@@ -52,7 +52,7 @@ WaitTime: 365
 
 ThisTime、TotalTime 的计算在 _frameworks\base\services\core\java\com\android\server\am\ActivityRecord.java_ 文件的 _reportLaunchTimeLocked()_ 函数中。
 
-![](2.png)
+![](/images/categories/android/android_notes/040/2.png)
 
 我们来解释下代码里curTime、displayStartTime、mLaunchStartTime三个时间变量.
 
@@ -64,7 +64,7 @@ ThisTime、TotalTime 的计算在 _frameworks\base\services\core\java\com\androi
 
 正常情况下点击桌面图标只启动一个有界面的 Activity，此时 displayStartTime 与mLaunchStartTime 便指向同一时间点，此时 ThisTime=TotalTime。另一种情况是点击桌面图标应用会先启动一个无界面的 Activity 做逻辑处理，接着又启动一个有界面的Activity，在这种启动一连串 Activity 的情况下（知乎的启动就是属于这种情况），displayStartTime 便指向最后一个 Activity 的开始启动时间点，mLaunchStartTime 指向第一个无界面Activity的开始启动时间点，此时 ThisTime！=TotalTime。这两种情况如下图：
 
-![](3.png)
+![](/images/categories/android/android_notes/040/3.png)
 
 在上面的图中，我用①②③分别标注了三个时间段，在这三个时间段内分别干了什么事呢？
 
