@@ -62,6 +62,16 @@ org.gradle.configureondemand=true
 
 上面的配置文件主要就是做， 增大gradle运行的java虚拟机的大小，让gradle在编译的时候使用独立进程，让gradle可以平行的运行。
 
+### 修改android studio配置
+
+在android studio的配置中，开启offline模式，以及修改配置。实际上的配置和上面的一大段一样，主要是在这个地方配置的只会在ide构建的时候生效，命令行构建不会生效。
+
+![](/images/categories/android/android_tips/002/as_gradle_offline.png)
+
+![](/images/categories/android/android_tips/002/as_gradle_config.png)
+
 ### 命令行构建
 
 基于上面的配置，命令行构建时在命令后面加上这个参数即可 --daemon --parallel --offline。
+
+转载自：[加速Android Studio/Gradle构建](http://blog.isming.me/2015/03/18/android-build-speed-up/)
