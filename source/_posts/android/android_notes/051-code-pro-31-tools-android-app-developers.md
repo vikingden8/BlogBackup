@@ -87,7 +87,7 @@ Source Tree is a clean, simple open-source tool to make Git more user-friendly. 
 
 Back in the days when the Android emulator was slower than a snail, GenyMotion was the only emulator of choice for Android developers. Since then, GenyMotion has expanded from being just an emulator to becoming a complete platform for advanced app development, testing, and deployment. Pricing is based on developers per year.
 
-![](/images/categories/android/android_notes/051/13.ipg)
+![](/images/categories/android/android_notes/051/13.jpg)
 
 * **Vysor**
 
