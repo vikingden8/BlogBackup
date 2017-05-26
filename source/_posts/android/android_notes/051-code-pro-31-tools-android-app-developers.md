@@ -1,5 +1,5 @@
 ---
-title: Code like a pro: 31 tools for Android app developers
+title: Code like a pro-31 tools for Android app developers
 date: 2017-5-26 09:35:48
 tags:
 categories: "Android学习笔记"
@@ -147,7 +147,7 @@ If you are an Android developer and using a Mac, then this tiny open-source tool
 
 * **DevKnox**
 
-There are several security flaws hidden inside our apps that developers are sometimes not even aware of, and it can take quite a lot of experience and effort before you understand various critical aspects of security enough to catch these flaws. But this awesome tool can help you detect security flaws, and it has a functionality that's just as easy to use as a spell checker in your IDE. 
+There are several security flaws hidden inside our apps that developers are sometimes not even aware of, and it can take quite a lot of experience and effort before you understand various critical aspects of security enough to catch these flaws. But this awesome tool can help you detect security flaws, and it has a functionality that's just as easy to use as a spell checker in your IDE.
 
 ![](/images/categories/android/android_notes/051/23.png)
 

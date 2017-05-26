@@ -1,0 +1,1130 @@
+{
+  "appInfos": [
+    {
+      "label": "金立appsipper",
+      "pkg": "com.appsipper.demo",
+      "version": "3.1.0.al"
+    },
+    {
+      "label": "SampleExtAuthService",
+      "pkg": "com.qualcomm.qti.auth.sampleextauthservice",
+      "version": "1.0"
+    },
+    {
+      "label": "com.qrd.omadownload",
+      "pkg": "com.qrd.omadownload",
+      "version": "1.0"
+    },
+    {
+      "label": "电话和短信存储",
+      "pkg": "com.android.providers.telephony",
+      "version": "6.0.1"
+    },
+    {
+      "label": "amigo桌面",
+      "mActivity": "com.android.launcher2.Launcher",
+      "pkg": "com.gionee.amisystem",
+      "version": "1.3.6.cw"
+    },
+    {
+      "label": "金立推送",
+      "pkg": "com.gionee.cloud.gpe",
+      "version": "2.4.1.s"
+    },
+    {
+      "label": "日历存储",
+      "pkg": "com.android.providers.calendar",
+      "version": "6.0.1"
+    },
+    {
+      "label": "媒体存储",
+      "pkg": "com.android.providers.media",
+      "version": "6.0.1"
+    },
+    {
+      "label": "softsim",
+      "pkg": "com.softsim.control",
+      "version": "1.0.0.ac"
+    },
+    {
+      "label": "Ami换机",
+      "mActivity": "com.gionee.dataghost.ui.nat.NatWelcomeActivity",
+      "pkg": "com.gionee.dataghost",
+      "version": "2.4.1.i"
+    },
+    {
+      "label": "com.qti.service.colorservice",
+      "pkg": "com.qti.service.colorservice",
+      "version": "1.0"
+    },
+    {
+      "label": "爱奇艺",
+      "mActivity": "com.qiyi.video.WelcomeActivity",
+      "pkg": "com.qiyi.video",
+      "version": "7.3"
+    },
+    {
+      "label": "com.gionee.helper",
+      "pkg": "com.mobiletools.systemhelper",
+      "version": "2.1-build20170210"
+    },
+    {
+      "label": "MBN 测试",
+      "pkg": "com.qualcomm.qti.modemtestmode",
+      "version": "6.0.1"
+    },
+    {
+      "label": "com.qualcomm.shutdownlistner",
+      "pkg": "com.qualcomm.shutdownlistner",
+      "version": "6.0.1"
+    },
+    {
+      "label": "搜狗输入法",
+      "pkg": "com.sohu.inputmethod.sogou",
+      "version": "8.3"
+    },
+    {
+      "label": "com.android.wallpapercropper",
+      "pkg": "com.android.wallpapercropper",
+      "version": "6.0.1"
+    },
+    {
+      "label": "com.quicinc.cne.CNEService",
+      "pkg": "com.quicinc.cne.CNEService",
+      "version": "1.0"
+    },
+    {
+      "label": "AutoMMI",
+      "pkg": "com.gionee.autommi",
+      "version": "3.0.0.bc"
+    },
+    {
+      "label": "com.qualcomm.qti.autoregistration",
+      "pkg": "com.qualcomm.qti.autoregistration",
+      "version": "1.0"
+    },
+    {
+      "label": "录屏",
+      "pkg": "com.gionee.screenrecorder",
+      "version": "01.0.0.29"
+    },
+    {
+      "label": "美团",
+      "mActivity": "com.sankuai.meituan.activity.PreloadedWelcome",
+      "pkg": "com.sankuai.meituan",
+      "version": "6.5.1"
+    },
+    {
+      "label": "com.qualcomm.qti.phonefeature",
+      "pkg": "com.qualcomm.qti.phonefeature",
+      "version": "6.0.1"
+    },
+    {
+      "label": "扫描成文",
+      "pkg": "gn.camera.plugin.editor",
+      "version": "2.0.0.aq"
+    },
+    {
+      "label": "优酷",
+      "mActivity": "com.youku.phone.ActivityWelcome",
+      "pkg": "com.youku.phone",
+      "version": "6.4.0"
+    },
+    {
+      "label": "在线客服",
+      "pkg": "com.gionee.telepath",
+      "version": "4.0.0.bn"
+    },
+    {
+      "label": "SmartcardService",
+      "pkg": "org.simalliance.openmobileapi.service",
+      "version": "3.1.0"
+    },
+    {
+      "label": "全景",
+      "pkg": "gn.camera.plugin.panorama",
+      "version": "1.0.0.ay"
+    },
+    {
+      "label": "文档",
+      "pkg": "com.android.documentsui",
+      "version": "6.0.1"
+    },
+    {
+      "label": "黑洞",
+      "pkg": "com.android.galaxy4",
+      "version": "1.0"
+    },
+    {
+      "label": "外部存储设备",
+      "pkg": "com.android.externalstorage",
+      "version": "6.0.1"
+    },
+    {
+      "label": "定时开关机",
+      "pkg": "com.android.timerswitch",
+      "version": "6.0.1"
+    },
+    {
+      "label": "铃音",
+      "pkg": "com.gionee.ringtone",
+      "version": "6.0.0.af"
+    },
+    {
+      "label": "HTML 查看程序",
+      "pkg": "com.android.htmlviewer",
+      "version": "6.0.1"
+    },
+    {
+      "label": "STAProxyService",
+      "pkg": "com.qualcomm.sta",
+      "version": "1.0"
+    },
+    {
+      "label": "SVI 设置",
+      "pkg": "com.qualcomm.svi",
+      "version": "1.0"
+    },
+    {
+      "label": "HealthAuthService",
+      "pkg": "com.qualcomm.qti.auth.healthauthservice",
+      "version": "1.0"
+    },
+    {
+      "label": "语音引擎",
+      "pkg": "com.iflytek.speechsuite",
+      "version": "1.1.10217"
+    },
+    {
+      "label": "长截屏",
+      "pkg": "com.gionee.longscreenshot",
+      "version": "01.01.0.01"
+    },
+    {
+      "label": "MmsService",
+      "pkg": "com.android.mms.service",
+      "version": "6.0.1"
+    },
+    {
+      "label": "下载管理程序",
+      "pkg": "com.android.providers.downloads",
+      "version": "3.1.0.u"
+    },
+    {
+      "label": "SampleAuthenticatorService",
+      "pkg": "com.qualcomm.qti.auth.sampleauthenticatorservice",
+      "version": "1.0"
+    },
+    {
+      "label": "指南针",
+      "mActivity": "jlzn.com.android.compass.JLZN_CompassActivity",
+      "pkg": "jlzn.com.android.compass",
+      "version": "2.1.0.aq"
+    },
+    {
+      "label": "安全防护",
+      "pkg": "com.qapp.secprotect",
+      "version": "1.0"
+    },
+    {
+      "label": "相册",
+      "mActivity": "com.gionee.gallery.app.story.page.StoryGalleryActivity",
+      "pkg": "com.gionee.gallery",
+      "version": "6.0.0.eb"
+    },
+    {
+      "label": "com.qualcomm.qti.telephonyservice",
+      "pkg": "com.qualcomm.qti.telephonyservice",
+      "version": "6.0.1"
+    },
+    {
+      "label": "浏览器",
+      "mActivity": "com.android.browser.GNBrowserActivity",
+      "pkg": "com.android.browser",
+      "version": "5.3.0.bi"
+    },
+    {
+      "label": "流量宝",
+      "pkg": "com.oupeng.max.sdk",
+      "version": "5.10.46-jinli"
+    },
+    {
+      "label": "搜索",
+      "pkg": "com.amigo.search",
+      "version": "2.1.0.h"
+    },
+    {
+      "label": "amigo系统服务",
+      "pkg": "com.amigo.server",
+      "version": "1.0.1.h"
+    },
+    {
+      "label": "手机防盗",
+      "pkg": "com.gionee.anti.stolen",
+      "version": "4.0.0.k"
+    },
+    {
+      "label": "FidoCryptoService",
+      "pkg": "com.qualcomm.qti.auth.fidocryptoservice",
+      "version": "1.0"
+    },
+    {
+      "label": "省电桌面",
+      "pkg": "com.gionee.powersaver.launcher",
+      "version": "3.1.0.cl"
+    },
+    {
+      "label": "语音助手",
+      "pkg": "gn.com.voice.assist",
+      "version": "02.1.2.1.cu"
+    },
+    {
+      "label": "录音机",
+      "mActivity": "com.android.soundrecorder.SoundRecorder",
+      "pkg": "com.android.soundrecorder",
+      "version": "2.1.2.j"
+    },
+    {
+      "label": "媒体存储设备",
+      "pkg": "com.android.providers.privatemedia",
+      "version": "6.0.1"
+    },
+    {
+      "label": "系统升级",
+      "mActivity": "gn.com.android.update.ui.AnimOtaActivity",
+      "pkg": "gn.com.android.update",
+      "version": "5.0.4.f"
+    },
+    {
+      "label": "软件包权限帮助程序",
+      "pkg": "com.android.defcontainer",
+      "version": "6.0.1"
+    },
+    {
+      "label": "下载管理",
+      "mActivity": "com.android.providers.downloads.ui.DownloadList",
+      "pkg": "com.android.providers.downloads.ui",
+      "version": "3.1.0.u"
+    },
+    {
+      "label": "PacProcessor",
+      "pkg": "com.android.pacprocessor",
+      "version": "6.0.1"
+    },
+    {
+      "label": "背光调节设置",
+      "pkg": "com.qualcomm.cabl",
+      "version": "1.0"
+    },
+    {
+      "label": "Pop-Perm",
+      "mActivity": "com.gionee.autotest.popperm.ui.SplashActivity",
+      "pkg": "com.gionee.autotest.popperm",
+      "version": "1.02.01L"
+    },
+    {
+      "label": "微信",
+      "mActivity": "com.tencent.mm.ui.LauncherUI",
+      "pkg": "com.tencent.mm",
+      "version": "6.5.6"
+    },
+    {
+      "label": "慢动作摄影",
+      "pkg": "gn.camera.plugin.slowmotion",
+      "version": "2.0.0.f"
+    },
+    {
+      "label": "证书安装程序",
+      "pkg": "com.android.certinstaller",
+      "version": "6.0.1"
+    },
+    {
+      "label": "com.android.carrierconfig",
+      "pkg": "com.android.carrierconfig",
+      "version": "1.0.0"
+    },
+    {
+      "label": "金立健康",
+      "mActivity": "com.gionee.www.healthy.launch.view.LaunchPageActivity",
+      "pkg": "com.gionee.www.healthy",
+      "version": "05.1.0.6"
+    },
+    {
+      "label": "Android系统",
+      "pkg": "android",
+      "version": "6.0.1"
+    },
+    {
+      "label": "联系人",
+      "mActivity": "com.android.contacts.activities.PeopleActivity",
+      "pkg": "com.android.contacts",
+      "version": "6.0.5.dz"
+    },
+    {
+      "label": "WFD 服务",
+      "pkg": "com.qualcomm.wfd.service",
+      "version": "2.0"
+    },
+    {
+      "label": "翻译",
+      "pkg": "gn.camera.plugin.translation",
+      "version": "1.0.0.aq"
+    },
+    {
+      "label": "手机百度",
+      "mActivity": "com.baidu.searchbox.SplashActivity",
+      "pkg": "com.baidu.searchbox",
+      "version": "7.1"
+    },
+    {
+      "label": "专线通话",
+      "mActivity": "com.gionee.authentication.AuthCodeActivity",
+      "pkg": "com.gionee.im",
+      "version": "01.1.0.2"
+    },
+    {
+      "label": "Settings web",
+      "pkg": "com.gionee.settings.web",
+      "version": "7.0.1.cy"
+    },
+    {
+      "label": "智能识别陌生号码",
+      "pkg": "com.ted.number",
+      "version": "3.0.0.g"
+    },
+    {
+      "label": "信息",
+      "mActivity": "com.android.mms.ui.BootActivity",
+      "pkg": "com.android.mms",
+      "version": "6.0.6.bp"
+    },
+    {
+      "label": "SIM 卡工具包",
+      "pkg": "com.android.stk",
+      "version": "6.0.1"
+    },
+    {
+      "label": "com.android.backupconfirm",
+      "pkg": "com.android.backupconfirm",
+      "version": "6.0.1"
+    },
+    {
+      "label": "权限监控",
+      "pkg": "com.mediatek.security",
+      "version": "6.0.1"
+    },
+    {
+      "label": "SmartBurst",
+      "pkg": "com.arcsoft.smartburst",
+      "version": "1.0.54"
+    },
+    {
+      "label": "org.codeaurora.ims",
+      "pkg": "org.codeaurora.ims",
+      "version": "1.0"
+    },
+    {
+      "label": "意图筛选器验证服务",
+      "pkg": "com.android.statementservice",
+      "version": "1.0"
+    },
+    {
+      "label": "com.android.wallpaper.holospiral",
+      "pkg": "com.android.wallpaper.holospiral",
+      "version": "6.0.1"
+    },
+    {
+      "label": "阅读",
+      "mActivity": "com.chaozh.iReader.ui.activity.WelcomeActivity",
+      "pkg": "com.chaozh.iReaderGionee",
+      "version": "5.3.1_20170302"
+    },
+    {
+      "label": "智能标签",
+      "pkg": "com.android.gionee.nfctag",
+      "version": "2.0.0.c"
+    },
+    {
+      "label": "日历",
+      "mActivity": "com.android.calendar.AllInOneActivity",
+      "pkg": "com.android.calendar",
+      "version": "6.0.8.bd"
+    },
+    {
+      "label": "镭光",
+      "pkg": "com.android.phasebeam",
+      "version": "1.0"
+    },
+    {
+      "label": "SecureExtAuthService",
+      "pkg": "com.qualcomm.qti.auth.secureextauthservice",
+      "version": "1.0"
+    },
+    {
+      "label": "系统管家SDK",
+      "pkg": "com.gionee.systemmanager",
+      "version": "3.1.0.cl"
+    },
+    {
+      "label": "com.qti.primarycardcontroller",
+      "pkg": "com.qti.primarycardcontroller",
+      "version": "6.0.1"
+    },
+    {
+      "label": "金立遥控",
+      "mActivity": "com.hzy.tvmao.view.activity.AppStartActivity",
+      "pkg": "com.kookong.app.gionee",
+      "version": "1.6.1"
+    },
+    {
+      "label": "com.qualcomm.qcrilmsgtunnel",
+      "pkg": "com.qualcomm.qcrilmsgtunnel",
+      "version": "6.0.1"
+    },
+    {
+      "label": "设置存储",
+      "pkg": "com.android.providers.settings",
+      "version": "6.0.1"
+    },
+    {
+      "label": "com.android.sharedstoragebackup",
+      "pkg": "com.android.sharedstoragebackup",
+      "version": "6.0.1"
+    },
+    {
+      "label": "SecurityProvider",
+      "pkg": "com.antiy.securityprovider",
+      "version": "2.0.13"
+    },
+    {
+      "label": "打印处理服务",
+      "pkg": "com.android.printspooler",
+      "version": "1"
+    },
+    {
+      "label": "手机管家",
+      "mActivity": "com.tencent.server.fore.QuickLoadActivity",
+      "pkg": "com.tencent.qqpimsecure",
+      "version": "6.1.0"
+    },
+    {
+      "label": "基本互动屏保",
+      "pkg": "com.android.dreams.basic",
+      "version": "6.0.1"
+    },
+    {
+      "label": "InCallUI",
+      "pkg": "com.android.incallui",
+      "version": "9.9.8"
+    },
+    {
+      "label": "com.android.frameworks.telresources",
+      "pkg": "com.android.frameworks.telresources",
+      "version": "6.0.1"
+    },
+    {
+      "label": "腾讯视频",
+      "mActivity": "com.tencent.qqlive.ona.activity.WelcomeActivity",
+      "pkg": "com.tencent.qqlive",
+      "version": "4.8.0.10150"
+    },
+    {
+      "label": "Android System WebView",
+      "pkg": "com.android.webview",
+      "version": "Developer Build"
+    },
+    {
+      "label": "输入设备",
+      "pkg": "com.android.inputdevices",
+      "version": "6.0.1"
+    },
+    {
+      "label": "夜景",
+      "pkg": "gn.camera.plugin.nightvideo",
+      "version": "1.0.0.w"
+    },
+    {
+      "label": "金立漫游",
+      "pkg": "com.delcom.standard",
+      "version": "2.0.0.n"
+    },
+    {
+      "label": "SecureSampleAuthService",
+      "pkg": "com.qualcomm.qti.auth.securesampleauthservice",
+      "version": "1.0"
+    },
+    {
+      "label": "QQ浏览器",
+      "mActivity": "com.tencent.mtt.SplashActivity",
+      "pkg": "com.tencent.mtt",
+      "version": "7.2.0.2932"
+    },
+    {
+      "label": "OMA DRM 引擎",
+      "pkg": "com.oma.drm",
+      "version": "1.0"
+    },
+    {
+      "label": "com.qti.xdivert",
+      "pkg": "com.qti.xdivert",
+      "version": "6.0.1"
+    },
+    {
+      "label": "SecurityDetection",
+      "pkg": "com.gionee.securitydetection",
+      "version": "3.1.0.cl"
+    },
+    {
+      "label": "com.gionee.appcloneshare",
+      "pkg": "com.gionee.appcloneshare",
+      "version": "01.0.0.01"
+    },
+    {
+      "label": "GN_FingerPrintInfoProvider",
+      "pkg": "com.gionee.providers.fingerprintinfo",
+      "version": "1.0"
+    },
+    {
+      "label": "云服务",
+      "pkg": "gn.com.android.synchronizer",
+      "version": "3.1.0.ap"
+    },
+    {
+      "label": "定时开关机",
+      "pkg": "com.gionee.schedulePower",
+      "version": "1.0.0.zz"
+    },
+    {
+      "label": "文本矫正",
+      "pkg": "gn.camera.plugin.picnote",
+      "version": "2.0.0.ai"
+    },
+    {
+      "label": "One Time Init",
+      "pkg": "com.android.onetimeinitializer",
+      "version": "6.0.1"
+    },
+    {
+      "label": "设备信息",
+      "pkg": "com.android.qrd.engineeringmode",
+      "version": "6.0.1"
+    },
+    {
+      "label": "今日头条",
+      "mActivity": "com.ss.android.article.news.activity.SplashActivity",
+      "pkg": "com.ss.android.article.news",
+      "version": "5.3.4"
+    },
+    {
+      "label": "通话管理",
+      "pkg": "com.android.server.telecom",
+      "version": "6.0.1"
+    },
+    {
+      "label": "PowerOffHandlerApp",
+      "pkg": "com.android.poweroffhandlerapp",
+      "version": "1.0"
+    },
+    {
+      "label": "密钥链",
+      "pkg": "com.android.keychain",
+      "version": "6.0.1"
+    },
+    {
+      "label": "相机",
+      "mActivity": "com.android.camera.CameraLauncher",
+      "pkg": "com.android.camera",
+      "version": "4.2.0.x"
+    },
+    {
+      "label": "故事锁屏",
+      "pkg": "com.amigo.keyguard",
+      "version": "1.3.3.ac"
+    },
+    {
+      "label": "SuperMe",
+      "mActivity": "com.gionee.autotest.deamon.MainActivity",
+      "pkg": "com.gionee.autotest.deamon",
+      "version": "1.0"
+    },
+    {
+      "label": "通话记录备份/还原",
+      "pkg": "com.android.calllogbackup",
+      "version": "6.0.1"
+    },
+    {
+      "label": "QQ",
+      "mActivity": "com.tencent.mobileqq.activity.SplashActivity",
+      "pkg": "com.tencent.mobileqq",
+      "version": "6.7.0"
+    },
+    {
+      "label": "com.fingerprints.serviceext",
+      "pkg": "com.fingerprints.serviceext",
+      "version": "1.0"
+    },
+    {
+      "label": "应用包安装程序",
+      "pkg": "com.android.packageinstaller",
+      "version": "2.1.1.ai"
+    },
+    {
+      "label": "Pico TTS",
+      "pkg": "com.svox.pico",
+      "version": "1.0"
+    },
+    {
+      "label": "ANT HAL Service",
+      "pkg": "com.dsi.ant.server",
+      "version": "4.0.0"
+    },
+    {
+      "label": "蓝牙",
+      "pkg": "com.gionee.bluetooth",
+      "version": "1.1.0.zd"
+    },
+    {
+      "label": "GnHardWareTest",
+      "pkg": "gn.com.android.mmitest",
+      "version": "3.0.0.ap"
+    },
+    {
+      "label": "ProxyHandler",
+      "pkg": "com.android.proxyhandler",
+      "version": "6.0.1"
+    },
+    {
+      "label": "Android 键盘 (AOSP)",
+      "pkg": "com.android.inputmethod.latin",
+      "version": "6.0.1"
+    },
+    {
+      "label": "无线直连",
+      "pkg": "gionee.com.WifiShare",
+      "version": "3.0.0.a"
+    },
+    {
+      "label": "开机引导",
+      "pkg": "com.gionee.setupwizard",
+      "version": "3.0.1.cl"
+    },
+    {
+      "label": "com.android.managedprovisioning",
+      "pkg": "com.android.managedprovisioning",
+      "version": "6.0.1"
+    },
+    {
+      "label": "主题壁纸",
+      "mActivity": "com.gionee.change.activity.ChangeGridActivity",
+      "pkg": "com.gionee.change",
+      "version": "6.5.8.r"
+    },
+    {
+      "label": "购物大厅",
+      "mActivity": "com.gionee.client.GNSplashActivity",
+      "pkg": "com.gionee.client",
+      "version": "2.9.9.t"
+    },
+    {
+      "label": "amigo设置存储",
+      "pkg": "com.amigo.settings.providers",
+      "version": "2.0.0.bz"
+    },
+    {
+      "label": "WLAN",
+      "pkg": "com.gionee.setting.adapter.wifi",
+      "version": "3.1.2.a"
+    },
+    {
+      "label": "名片扫描",
+      "pkg": "gn.camera.plugin.card",
+      "version": "1.0.0.ai"
+    },
+    {
+      "label": "天气",
+      "mActivity": "com.coolwind.weather.SplashActivity",
+      "pkg": "com.coolwind.weather",
+      "version": "2.0.9.ao"
+    },
+    {
+      "label": "泡泡",
+      "pkg": "com.android.noisefield",
+      "version": "1.0"
+    },
+    {
+      "label": "StatManQ",
+      "pkg": "com.qti.smq.qualcommFeedback",
+      "version": "1.5.0.60-snapdragonPrd"
+    },
+    {
+      "label": "com.android.smspush",
+      "pkg": "com.android.smspush",
+      "version": "6.0.1"
+    },
+    {
+      "label": "应用分身",
+      "pkg": "com.gionee.appclone",
+      "version": "01.0.0.17"
+    },
+    {
+      "label": "记事本",
+      "mActivity": "com.gionee.note.HomeActivity",
+      "pkg": "com.gionee.note",
+      "version": "2.0.6.aw"
+    },
+    {
+      "label": "Live Wallpaper Picker",
+      "pkg": "com.android.wallpaper.livepicker",
+      "version": "6.0.1"
+    },
+    {
+      "label": "视频",
+      "mActivity": "com.gionee.video.VideoMainActivity",
+      "pkg": "com.gionee.video",
+      "version": "3.0.0.cb"
+    },
+    {
+      "label": "语音服务",
+      "pkg": "gn.com.voice",
+      "version": "04.1.2.2.cz"
+    },
+    {
+      "label": "Gionee Logger",
+      "pkg": "com.gionee.logger",
+      "version": "6.0.1"
+    },
+    {
+      "label": "软件商店",
+      "mActivity": "com.gionee.aora.market.GoApkLoginAndRegister",
+      "pkg": "com.gionee.aora.market",
+      "version": "9300.4001"
+    },
+    {
+      "label": "支付保险箱",
+      "mActivity": "com.gionee.paymentsafetybox.EnhancedSecurityWalletActivity",
+      "pkg": "com.gionee.paymentsafetybox",
+      "version": "3.1.0.cl"
+    },
+    {
+      "label": "网络位置",
+      "pkg": "com.baidu.map.location",
+      "version": "4.0"
+    },
+    {
+      "label": "com.qualcomm.qti.telephony.vodafonepack",
+      "pkg": "com.qualcomm.qti.telephony.vodafonepack",
+      "version": "1.0"
+    },
+    {
+      "label": "私密空间",
+      "mActivity": "com.gionee.encryptspace.EnterPathActivity",
+      "pkg": "com.gionee.encryptspace",
+      "version": "01.0.0.111"
+    },
+    {
+      "label": "腾讯新闻",
+      "mActivity": "com.tencent.news.activity.SplashActivity",
+      "pkg": "com.tencent.news",
+      "version": "5.0.1"
+    },
+    {
+      "label": "Gesture WakeUp",
+      "pkg": "com.gionee.gnwakeup",
+      "version": "6.0.1"
+    },
+    {
+      "label": "工厂类测试",
+      "mActivity": "com.gionee.factorytests.MainActivity",
+      "pkg": "com.gionee.factorytests",
+      "version": "1.0.0.ay"
+    },
+    {
+      "label": "com.qualcomm.qti.extsettings",
+      "pkg": "com.qualcomm.qti.extsettings",
+      "version": "6.0.1"
+    },
+    {
+      "label": "OpenWnn",
+      "pkg": "jp.co.omronsoft.openwnn",
+      "version": "6.0.1"
+    },
+    {
+      "label": "设置",
+      "mActivity": "com.android.settings.GnSettingsTabActivity",
+      "pkg": "com.android.settings",
+      "version": "7.0.1.cy"
+    },
+    {
+      "label": "com.qualcomm.qti.ims",
+      "pkg": "com.qualcomm.qti.ims",
+      "version": "1.0"
+    },
+    {
+      "label": "悬浮触点",
+      "pkg": "com.gionee.floatingtouch",
+      "version": "01.6.1.0.ac"
+    },
+    {
+      "label": "手机京东",
+      "mActivity": "com.jingdong.app.mall.main.MainActivity",
+      "pkg": "com.jingdong.app.mall",
+      "version": "5.8.0"
+    },
+    {
+      "label": "出国助手",
+      "mActivity": "com.gionee.travel.ui.activity.WelcomeActivity",
+      "pkg": "com.gionee.travel",
+      "version": "1.2.0.av"
+    },
+    {
+      "label": "计算器",
+      "mActivity": "com.android.calculator2.Calculator",
+      "pkg": "com.android.calculator2",
+      "version": "6.0.1.al"
+    },
+    {
+      "label": "高德地图",
+      "mActivity": "com.autonavi.map.activity.SplashActivity",
+      "pkg": "com.autonavi.minimap",
+      "version": "7.8.0.S11"
+    },
+    {
+      "label": "LocationServices",
+      "pkg": "com.qualcomm.location",
+      "version": "1.0"
+    },
+    {
+      "label": "桌面看看",
+      "pkg": "com.gionee.amisystem.yourpage",
+      "version": "1.1.1.ao"
+    },
+    {
+      "label": "com.qualcomm.qti.qs",
+      "pkg": "com.qualcomm.qti.qs",
+      "version": "1.0"
+    },
+    {
+      "label": "com.qualcomm.qti.tm",
+      "pkg": "com.qualcomm.qti.tm",
+      "version": "1.0"
+    },
+    {
+      "label": "com.gionee.smartstay",
+      "pkg": "com.gionee.smartstay",
+      "version": "1.0"
+    },
+    {
+      "label": "com.qualcomm.qti.tetherservice",
+      "pkg": "com.qualcomm.qti.tetherservice",
+      "version": "1.0"
+    },
+    {
+      "label": "调频收音机",
+      "mActivity": "com.caf.fmradio.FMRadio",
+      "pkg": "com.caf.fmradio",
+      "version": "2.1.0.g"
+    },
+    {
+      "label": "MdtpService",
+      "pkg": "com.qualcomm.qti.securemsm.mdtp",
+      "version": "1.0"
+    },
+    {
+      "label": "美颜",
+      "pkg": "gn.camera.plugin.facebeauty",
+      "version": "1.1.0.u"
+    },
+    {
+      "label": "Android动态壁纸",
+      "pkg": "com.android.wallpaper",
+      "version": "6.0.1"
+    },
+    {
+      "label": "VpnDialogs",
+      "pkg": "com.android.vpndialogs",
+      "version": "6.0.1"
+    },
+    {
+      "label": "电子邮件",
+      "mActivity": "com.kingsoft.email.activity.Welcome",
+      "pkg": "com.android.email",
+      "version": "GN_1.0.0.bi"
+    },
+    {
+      "label": "音乐",
+      "mActivity": "com.android.music.MusicScanResultActivity",
+      "pkg": "com.android.music",
+      "version": "5.1.0.fo"
+    },
+    {
+      "label": "电话服务",
+      "pkg": "com.android.phone",
+      "version": "6.0.1"
+    },
+    {
+      "label": "Shell",
+      "pkg": "com.android.shell",
+      "version": "6.0.1"
+    },
+    {
+      "label": "金立钱包",
+      "mActivity": "com.gionee.gsp.wallet.components.activities.WelcomeActivity",
+      "pkg": "com.gionee.gsp",
+      "version": "4.0.3.zc"
+    },
+    {
+      "label": "用户字典",
+      "pkg": "com.android.providers.userdictionary",
+      "version": "6.0.1"
+    },
+    {
+      "label": "LunarInfoProvider",
+      "pkg": "com.qualcomm.qti.lunarinfo",
+      "version": "6.0.1"
+    },
+    {
+      "label": "ScriptRecord",
+      "mActivity": "com.gionee.autotest.recorder.MainActivity",
+      "pkg": "com.gionee.autotest.recorder",
+      "version": "1.0"
+    },
+    {
+      "label": "一体化位置信息",
+      "pkg": "com.android.location.fused",
+      "version": "6.0.1"
+    },
+    {
+      "label": "时钟",
+      "mActivity": "com.android.deskclock.AlarmClock",
+      "pkg": "com.android.deskclock",
+      "version": "5.0.0.ae"
+    },
+    {
+      "label": "系统界面",
+      "pkg": "com.android.systemui",
+      "version": "8.0.0.hk"
+    },
+    {
+      "label": "系统管家",
+      "mActivity": "com.gionee.softmanager.MainActivity",
+      "pkg": "com.gionee.softmanager",
+      "version": "3.1.0.cl"
+    },
+    {
+      "label": "用户中心",
+      "mActivity": "com.gionee.gnservice.UserCenterActivity",
+      "pkg": "com.gionee.gnservice",
+      "version": "3.0.1.ek"
+    },
+    {
+      "label": "蓝牙 MIDI 服务",
+      "pkg": "com.android.bluetoothmidiservice",
+      "version": "6.0.1"
+    },
+    {
+      "label": "配置拨号器",
+      "pkg": "com.qualcomm.qti.confdialer",
+      "version": "6.0.1"
+    },
+    {
+      "label": "com.qualcomm.qti.networksetting",
+      "pkg": "com.qualcomm.qti.networksetting",
+      "version": "6.0.1"
+    },
+    {
+      "label": "官方售后",
+      "pkg": "com.gionee.customerhelper",
+      "version": "2.0.1.dx"
+    },
+    {
+      "label": "com.qualcomm.fastdormancy",
+      "pkg": "com.qualcomm.fastdormancy",
+      "version": "6.0.1"
+    },
+    {
+      "label": "FidoSuiService",
+      "pkg": "com.qualcomm.qti.auth.fidosuiservice",
+      "version": "1.0"
+    },
+    {
+      "label": "Multiwindow",
+      "pkg": "com.gionee.multiwindow",
+      "version": "01.0.0.36"
+    },
+    {
+      "label": "游戏大厅",
+      "mActivity": "gn.com.android.gamehall.GNMainActivity",
+      "pkg": "gn.com.android.gamehall",
+      "version": "1.6.7.zb"
+    },
+    {
+      "label": "蓝牙共享",
+      "pkg": "com.android.bluetooth",
+      "version": "6.0.1"
+    },
+    {
+      "label": "com.qualcomm.timeservice",
+      "pkg": "com.qualcomm.timeservice",
+      "version": "6.0.1"
+    },
+    {
+      "label": "com.qualcomm.embms",
+      "pkg": "com.qualcomm.embms",
+      "version": "1.0"
+    },
+    {
+      "label": "联系人存储",
+      "pkg": "com.android.providers.contacts",
+      "version": "6.0.1"
+    },
+    {
+      "label": "驾驶模式",
+      "mActivity": "com.gn.drivingpattern.GuideActivity",
+      "pkg": "com.gn.drivingpattern",
+      "version": "01.0.0.12"
+    },
+    {
+      "label": "CaptivePortalLogin",
+      "pkg": "com.android.captiveportallogin",
+      "version": "6.0.1"
+    },
+    {
+      "label": "amigo帐号",
+      "pkg": "com.gionee.account",
+      "version": "4.0.1.bu"
+    },
+    {
+      "label": "易听音效",
+      "pkg": "com.gionee.audioeffect",
+      "version": "1.0.0.ab"
+    },
+    {
+      "label": "商务秘书",
+      "mActivity": "com.gionee.secretary.view.SplashActivity",
+      "pkg": "com.gionee.secretary",
+      "version": "01.1.0.16"
+    },
+    {
+      "label": "东舟软件终端自动化测试系统后台服务",
+      "pkg": "com.dzsoft.smartrobot.uiauto.daemon.service",
+      "version": "5.8.2"
+    },
+    {
+      "label": "日历本地帐户",
+      "pkg": "com.qualcomm.qti.calendarlocalaccount",
+      "version": "6.0.1"
+    },
+    {
+      "label": "文件管理",
+      "mActivity": "com.gionee.filemanager.FileExplorerTabActivity",
+      "pkg": "com.gionee.filemanager",
+      "version": "2.1.1.bk"
+    },
+    {
+      "label": "安全键盘",
+      "pkg": "com.gionee.secureime",
+      "version": "1.0.0.h"
+    }
+  ],
+  "isSuccess": true
+}
