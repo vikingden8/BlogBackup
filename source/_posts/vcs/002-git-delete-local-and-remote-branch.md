@@ -25,24 +25,17 @@ viking@Viking ~/work/android-projects/Android-Architecture $ git branch -a
   02-mvc
   02-mvp1
   02-mvp2
-  02-mvp3
-  03-mvp
-  03-mvp1
-  03-mvp2
-* 03-mvp3
+* 02-mvp3
   empty
   master
   remotes/origin/02-mvc
   remotes/origin/02-mvp1
   remotes/origin/02-mvp2
   remotes/origin/02-mvp3
-  remotes/origin/03-mvp
-  remotes/origin/03-mvp1
-  remotes/origin/03-mvp2
-  remotes/origin/03-mvp3
-  remotes/origin/empty
   remotes/origin/master
 ```
+
+<!--more-->
 
 * delete local branch
 
