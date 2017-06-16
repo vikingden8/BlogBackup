@@ -7,7 +7,7 @@ title: Viking's Website
 subtitle: Notes, thoughts, stories.
 description: Life is short , make it worth.
 author: Viking Den
-language: zh-Hans
+language: en
 timezone:
 avatar: https://avatars2.githubusercontent.com/u/16629000?v=3&s=460
 duoshuo_shortname: vikingden
@@ -65,7 +65,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: material
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
