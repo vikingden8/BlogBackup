@@ -1,5 +1,5 @@
 ---
-title: Getting Started With Gradle: Our First Java Project
+title: Getting Started With Gradle-Our First Java Project
 date: 2017-06-28 20:38:41
 tags:
 categories: "持续构建"
