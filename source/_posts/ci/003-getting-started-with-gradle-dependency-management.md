@@ -449,7 +449,7 @@ When we run our unit tests, Gradle creates test reports to the following directo
 
 The HTML test report is very useful tool because it describes the reason why our test failed. For example, if our unit test would expect that the _getMessage()_ method of the _MessageService_ class returns the string ‘Hello Worl1d!’, the HTML test report of that test case would look as follows:
 
-![](testfailure-1024x493.png)
+![](/images/categories/ci/003/testfailure-1024x493.png)
 
 Let’s move on and find out how we can package and run our example application.
 
