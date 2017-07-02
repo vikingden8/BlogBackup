@@ -91,7 +91,7 @@ To specify a visibility of the primary constructor of a class, use the following
 ```Kotlin
 class C private constructor(a: Int) { ... }
 ```
-
+014-kotlin
 Here the constructor is private. By default, all constructors are public, which effectively amounts to them being visible everywhere where the class is visible (i.e. a constructor of an internal class is only visible within the same module).
 
 ### Local declarations
