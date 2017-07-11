@@ -217,9 +217,9 @@ post_meta:
 
 
 # Wechat Subscriber
-wechat_subscriber:
-  enabled: true
-  qcode: /images/contacts/wechat.JPG
+# wechat_subscriber:
+  # enabled: true
+  # qcode: /images/contacts/wechat.JPG
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 
