@@ -160,6 +160,6 @@ And here’s the markup for that icon:
 
 May all your BlackBerry – Android – iOS(7) dreams come true.
 
-
+![](/images/categories/web/014/03.png)
 
 Origin Post :[http://www.jonathantneal.com/blog/understand-the-favicon/](http://www.jonathantneal.com/blog/understand-the-favicon/)
