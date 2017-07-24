@@ -15,6 +15,8 @@ When a new window opens, it covers the user’s earlier window. The user is left
 
 ![](/images/categories/web/016/browser-tabs.png)
 
+<!--more-->
+
 #### Internal vs. External Links
 
 Links that take users to another page on the same website are internal links. Internal links should never open in new browser tabs, but rather the same tab the user is on.
