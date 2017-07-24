@@ -15,7 +15,7 @@ Finding the right time to ask for runtime permissions has an important impact on
 
 <!--more-->
 
-![]((/images/categories/android/android_notes/062/runtime-permission-promt.png)
+![](/images/categories/android/android_notes/062/runtime-permission-promt.png)
 
 In many cases, you can avoid permissions altogether by using the existing intents system to utilize other existing specialized apps rather than building a full experience within your app. An example of this is using _ACTION_IMAGE_CAPTURE_ to start an existing camera app the user is familiar with rather than building your own camera experience. Learn more about permissions versus intents.
 

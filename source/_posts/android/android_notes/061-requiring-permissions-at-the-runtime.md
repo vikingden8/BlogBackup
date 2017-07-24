@@ -94,7 +94,7 @@ if (ContextCompat.checkSelfPermission(thisActivity,
 
 #### Handle the permissions request response
 
-When your app requests permissions, the system presents a dialog box to the user. When the user responds, the system invokes your app's _onRequestPermissionsResult()_ method, passing it the user response. Your app has to override that method to find out whether the permission was granted. The callback is passed the same request code you passed to _requestPermissions()_. For example, if an app requests _READ_CONTACTS_ access it might have the following callback method:
+When your app requests permissions, the system presents a dialog box to the user. When the user responds, the system invokes your app's _onRequestPermissionsResult()_ method, passing it the user response. Your app has to override that method to find out whether the permission was granted. The callback is passed the same request code you passed to _requestPermissions()_. For example, if an app requests READ_CONTACTS access it might have the following callback method:
 
 ```java
 @Override
@@ -127,10 +127,10 @@ The dialog box shown by the system describes the permission group your app needs
 
 >Note: Your app still needs to explicitly request every permission it needs, even if the user has already granted another permission in the same group. In addition, the grouping of permissions into groups may change in future Android releases. Your code should not rely on the assumption that particular permissions are or are not in the same group.
 
-For example, suppose you list both _READ_CONTACTS_ and _WRITE_CONTACTS_ in your app manifest. If you request _READ_CONTACTS_ and the user grants the permission, and you then request _WRITE_CONTACTS_, the system immediately grants you that permission without interacting with the user.
+For example, suppose you list both READ_CONTACTS and WRITE_CONTACTS in your app manifest. If you request READ_CONTACTS and the user grants the permission, and you then request WRITE_CONTACTS, the system immediately grants you that permission without interacting with the user.
 
 If the user denies a permission request, your app should take appropriate action. For example, your app might show a dialog explaining why it could not perform the user's requested action that needs that permission.
 
-When the system asks the user to grant a permission, the user has the option of telling the system not to ask for that permission again. In that case, any time an app uses _requestPermissions()_ to ask for that permission again, the system immediately denies the request. The system calls your _onRequestPermissionsResult()_ callback method and passes _PERMISSION_DENIED_, the same way it would if the user had explicitly rejected your request again. This means that when you call _requestPermissions()_, you cannot assume that any direct interaction with the user has taken place.
+When the system asks the user to grant a permission, the user has the option of telling the system not to ask for that permission again. In that case, any time an app uses _requestPermissions()_ to ask for that permission again, the system immediately denies the request. The system calls your _onRequestPermissionsResult()_ callback method and passes PERMISSION_DENIED, the same way it would if the user had explicitly rejected your request again. This means that when you call _requestPermissions()_, you cannot assume that any direct interaction with the user has taken place.
 
 From:[Requesting Permissions at Run Time](https://developer.android.com/training/permissions/requesting.html#perm-request)
