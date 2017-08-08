@@ -57,3 +57,5 @@ Here the dimensions of the element are calculated as:, width = width of the cont
 The width and height properties include the _content_, the _padding_ and _border_, but not the _margin_. Note that _padding_ and _border_ will be inside of the box e.g.  .box {width: 350px; border: 10px solid black;} leads to a box rendered in the browser of width: 350px. The content box can't be negative and is floored to 0, making it impossible to use border-box to make the element disappear.
 
 Here the dimensions of the element are calculated as: width = border + padding + width of the content, and height = border + padding + height of the content.
+
+From:[box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
