@@ -10,6 +10,8 @@ It is a set of SQL commands used to create, modify and delete database structure
 
 **Example**: CREATE, ALTER, DROP, TRUNCATE, COMMENT.
 
+<!--more-->
+
 ### **DML (Data Manipulation Language)**
 
 These are SQL Statements that allows changing data within the database.
