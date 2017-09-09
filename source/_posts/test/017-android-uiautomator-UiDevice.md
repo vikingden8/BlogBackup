@@ -57,3 +57,16 @@ public void setCompressedLayoutHeirarchy(boolean compressed) {
 ```
 
 setCompressedLayoutHeirarchy通过此方法来设置在获取当前界面对象的时候是否采用压缩布局，也就是Accessibility框架只提供对uiautomator有用的测试控件节点。
+
+```java
+public void setCompressedLayoutHierarchy(boolean compressed) {
+    AccessibilityServiceInfo info = mUiAutomation.getServiceInfo();
+    if (compressed)
+        info.flags &= ~AccessibilityServiceInfo.FLAG_INCLUDE_NOT_IMPORTANT_VIEWS;
+    else
+        info.flags |= AccessibilityServiceInfo.FLAG_INCLUDE_NOT_IMPORTANT_VIEWS;
+    mUiAutomation.setServiceInfo(info);
+}
+```
+
+UiAutomatorBridge中的setCompressedLayoutHierarchy方法可以看出，其实就是在获取控件信息时设置是否过滤不重要控件的一个标记。
