@@ -7,7 +7,7 @@ categories: "Android官方博客"
 
 ![](/images/categories/android/android-developer-blog/android_developer_blog.png)
 
-From : [Android Layout Tricks #2: Reusing layouts](https://android-developers.googleblog.com/2009/02/android-layout-tricks-1.html)
+From : [Android Layout Tricks #2: Reusing layouts](https://android-developers.googleblog.com/2009/02/android-layout-tricks-2-reusing-layouts.html)
 
 Android comes with a wide variety of widgets, small visual construction blocks you can glue together to present the users with complex and useful interfaces. However applications often need higher level visual components. A component can be seen as a complex widget made of several simple stock widgets. You could for instance reuse a panel containing a progress bar and a cancel button, a panel containing two buttons (positive and negative actions), a panel with an icon, a title and a description, etc. Creating new components can be done easily by writing a custom View but it can be done even more easily using only XML.
 
@@ -41,4 +41,4 @@ In the **<include />** only the layout attribute is required. This attribute, wi
 
 This tag is particularly useful when you need to customize only part of your UI depending on the device's configuration. For instance, the main layout of your activity can be placed in the **layout/** directory and can include another layout which exists in two flavors, in **layout-land/** and **layout-port/**. This allows you to share most of the UI in portrait and landscape.
 
-Like I mentioned earlier, my next post will explain the **<merge />**, which can be particularly powerful when combined with **<include />**.
+Like I mentioned earlier, my next post will explain the **<merge />**, which can be particularly powerful when combined with **<include />**.024-
