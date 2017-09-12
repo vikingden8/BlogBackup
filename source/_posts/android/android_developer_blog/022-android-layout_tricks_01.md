@@ -1,6 +1,6 @@
 ---
-title: Changes to the SecretKeyFactory API in Android 4.4
-date: 2017-03-15 22:25:03
+title: Android Layout Tricks
+date: 2017-09-13 07:09:40
 tags:
 categories: "Android官方博客"
 ---
