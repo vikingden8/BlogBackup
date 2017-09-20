@@ -260,6 +260,78 @@ if (drag)
 ```
 mUiAutomatorBridge是一个抽象方法，具体的实现[InstrumentationUiAutomatorBridge.java](https://android.googlesource.com/platform/frameworks/testing/+/master/uiautomator/instrumentation/testrunner-src/com/android/uiautomator/core/InstrumentationUiAutomatorBridge.java)最终是通过ViewConfiguration.getLongPressTimeout()获取的.
 
+```java
+/**
+ * @return the duration in milliseconds before a press turns into
+ * a long press
+ */
+public static int getLongPressTimeout() {
+    return AppGlobals.getIntCoreSetting(Settings.Secure.LONG_PRESS_TIMEOUT,
+            DEFAULT_LONG_PRESS_TIMEOUT);
+}
+
+```
+
+在[ViewConfiguration](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/view/ViewConfiguration.java)中的默认定义是500ms：
+
+```java
+/**
+ * Defines the default duration in milliseconds before a press turns into
+ * a long press
+ */
+private static final int DEFAULT_LONG_PRESS_TIMEOUT = 500;
+```
+
+其实也可以通过直接读取数据库的方式实现,[ShellUiAutomatorBridge.java](https://android.googlesource.com/platform/frameworks/testing/+/master/uiautomator/library/testrunner-src/com/android/uiautomator/core/ShellUiAutomatorBridge.java)：
+
+```java
+public long getSystemLongPressTime() {
+    // Read the long press timeout setting.
+    long longPressTimeout = 0;
+    try {
+        IContentProvider provider = null;
+        Cursor cursor = null;
+        IActivityManager activityManager = ActivityManagerNative.getDefault();
+        String providerName = Settings.Secure.CONTENT_URI.getAuthority();
+        IBinder token = new Binder();
+        try {
+            ContentProviderHolder holder = activityManager.getContentProviderExternal(
+                    providerName, UserHandle.USER_OWNER, token);
+            if (holder == null) {
+                throw new IllegalStateException("Could not find provider: " + providerName);
+            }
+            provider = holder.provider;
+            cursor = provider.query(null, Settings.Secure.CONTENT_URI,
+                    new String[] {
+                        Settings.Secure.VALUE
+                    }, "name=?",
+                    new String[] {
+                        Settings.Secure.LONG_PRESS_TIMEOUT
+                    }, null, null);
+            if (cursor.moveToFirst()) {
+                longPressTimeout = cursor.getInt(0);
+            }
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+            if (provider != null) {
+                activityManager.removeContentProviderExternal(providerName, token);
+            }
+        }
+    } catch (RemoteException e) {
+        String message = "Error reading long press timeout setting.";
+        Log.e(LOG_TAG, message, e);
+        throw new RuntimeException(message, e);
+    }
+    return longPressTimeout;
+}
+```
+
+>为什么LongPressTime要从数据库中获取呢？
+
+其实主要是为了Accessibility,设置中主要有三种可定制长按时间Short，Medium以及Long，具体各自的时间为多少，还待考证！
+
 REGULAR_CLICK_LENGTH在[InteractionController](https://android.googlesource.com/platform/frameworks/testing/+/master/uiautomator/library/core-src/com/android/uiautomator/core/InteractionController.java)定义成了100ms.
 
 ```java
