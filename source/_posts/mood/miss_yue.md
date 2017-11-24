@@ -22,6 +22,8 @@ categories: "随笔"
 
 ...
 
+<!--more-->
+
 ![](/images/categories/mood/DSC_0008-01.jpeg)
 
 ![](/images/categories/mood/DSC_0239-01.jpeg)
