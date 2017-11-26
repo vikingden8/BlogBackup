@@ -1,6 +1,6 @@
 ---
 title: Binary, inverse and complement codes
-date: 2017-11-26 159:00:02
+date: 2017-11-26 15:00:02
 tags:
 categories: "Java学习笔记"
 ---
