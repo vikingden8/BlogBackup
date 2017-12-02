@@ -1,7 +1,7 @@
 ---
 title: 数据结构绪论
 date: 2016-12-27 20:01:50
-categories: "数据结构"
+categories: "数据结构与算法"
 ---
 
 本文是学习数据结构的开篇，这系列的笔记大部分是基于[程杰](https://www.zhihu.com/people/cj723/answers)著的《[大话数据结构](http://item.jd.com/10663703.html)》。
