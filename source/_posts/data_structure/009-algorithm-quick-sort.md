@@ -66,7 +66,7 @@ public static boolean less(Comparable a , Comparable b){
 
 ![](/images/categories/data_structure/009/quick-sort.jpg)
 
-### 参考
+### 参考 
 
 * [坐在马桶上看算法：快速排序](http://developer.51cto.com/art/201403/430986.htm)
 
