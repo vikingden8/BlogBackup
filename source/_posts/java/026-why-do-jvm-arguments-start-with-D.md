@@ -9,11 +9,9 @@ From : [Why do JVM arguments start with “-D”?](https://stackoverflow.com/que
 
 下面主要说的是-D的D是define的意思：
 
-"Define". The meaning is similar to a preprocessor definition in C. The -D signifies that the definition is in the 
-context of the application, and not in the Java interpreter context like any other option before the executable name.
+"Define". The meaning is similar to a preprocessor definition in C. The -D signifies that the definition is in the context of the application, and not in the Java interpreter context like any other option before the executable name.
 
-The usage of the letter "D" isn't specifically explained in the documentation, but the only use is to "define" a key in 
-the system properties map.
+The usage of the letter "D" isn't specifically explained in the documentation, but the only use is to "define" a key in the system properties map.
 
 <!--more-->
 

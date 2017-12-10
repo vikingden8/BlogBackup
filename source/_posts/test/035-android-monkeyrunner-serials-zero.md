@@ -9,8 +9,7 @@ monkeyrunner的执行程序在sdk下的tools目录下，最新的sdk位置tools�
 
 monkeyrunner的源码路径：[monkeyrunner](https://android.googlesource.com/platform/tools/swt/+/master/monkeyrunner/)
 
-sdk下的monkeyrunner.bat就是来自于: [monkeyrunner.bat](https://android.googlesource.com/platform/tools/swt/+/master/monkeyrunner/etc/monkeyrunner.bat)
-可以看出，带.bat是Windows下的。Linux或Mac OS下的来自于SH脚本：[monkeyrunner](https://android.googlesource.com/platform/tools/swt/+/master/monkeyrunner/etc/monkeyrunner)
+sdk下的monkeyrunner.bat就是来自于: [monkeyrunner.bat](https://android.googlesource.com/platform/tools/swt/+/master/monkeyrunner/etc/monkeyrunner.bat). 可以看出，带.bat是Windows下的。Linux或Mac OS下的来自于SH脚本：[monkeyrunner](https://android.googlesource.com/platform/tools/swt/+/master/monkeyrunner/etc/monkeyrunner)
 
 有兴趣的可以看下这个脚本的实现，这里关注的是最后一行的代码：
 
@@ -54,8 +53,7 @@ public static void main(String[] args) {
 }
 ```
 
-main方法首先根据输入的参数，构建出了MonkeyRunnerOptions对象，如果参数不合法，则直接退出；然后，设置Log相关的参数；最后，把参数options传给
-MonkeyRunnerStarter，并调用它的run方法来执行，最后根据运行返回的值关闭程序。
+main方法首先根据输入的参数，构建出了MonkeyRunnerOptions对象，如果参数不合法，则直接退出；然后，设置Log相关的参数；最后，把参数options传给MonkeyRunnerStarter，并调用它的run方法来执行，最后根据运行返回的值关闭程序。
 
 先来看下MonkeyRunnerOptions中参数的处理：
 
@@ -280,8 +278,7 @@ public class MonkeyRunnerStarter {
 }
 ```
 
-可以看出，options传给了ChimpChat，ChimpChat可以堪称是monkeyruner与设备通信，如发送事件的一个通信组件，后面有章节会介绍到其的具体实现，
-然后调用MonkeyRunnerStarter的run方法：
+可以看出，options传给了ChimpChat，ChimpChat可以堪称是monkeyruner与设备通信，如发送事件的一个通信组件，后面有章节会介绍到其的具体实现，然后调用MonkeyRunnerStarter的run方法：
 
 ```java 
 private int run() {
@@ -303,8 +300,7 @@ private int run() {
 }
 ```
 
-run()方法其实做的主要是两件事情，第一件：加载插件，hanlePlugins；第二件：根据给定的参数，如果包含用Python写的脚本文件，则会执行脚本文件里面的
-内容；如果没有指定脚本文件，mokeyrunner则会以交互的方式运行，就像python的交互模式一样。
+run()方法其实做的主要是两件事情，第一件：加载插件，hanlePlugins；第二件：根据给定的参数，如果包含用Python写的脚本文件，则会执行脚本文件里面的内容；如果没有指定脚本文件，mokeyrunner则会以交互的方式运行，就像python的交互模式一样。
 
 下一章节主要介绍handlePlugins()的实现逻辑。
 

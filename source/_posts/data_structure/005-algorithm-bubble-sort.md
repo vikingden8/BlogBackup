@@ -6,12 +6,9 @@ categories: "数据结构与算法"
 
 Bubble Sort - 冒泡排序，下面是Wikipedia对其的定义：
 
->**Bubble sort** sometimes referred to as _sinking sort_, is a simple sorting algorithm that repeatedly steps through the list to be 
-sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list 
-is repeated until no swaps are needed, which indicates that the list is sorted. 
+>**Bubble sort** sometimes referred to as _sinking sort_, is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. 
 
-简单翻译以下: 冒泡排序，有时也称作 _sinking sort_（实在没有很优雅的词汇来描述这个sinking，sinking的意思就是沉下来）,是一种简单的排序算法，
-通过比较相邻的两个元素，如果他们的顺序不正确的情况下，他们的元素值互换。直到没有需要互换的元素为止，也就意味着列表集合已经是有序的。
+简单翻译以下: 冒泡排序，有时也称作 _sinking sort_（实在没有很优雅的词汇来描述这个sinking，sinking的意思就是沉下来）,是一种简单的排序算法，通过比较相邻的两个元素，如果他们的顺序不正确的情况下，他们的元素值互换。直到没有需要互换的元素为止，也就意味着列表集合已经是有序的。
 
 <!--more-->
 
@@ -120,8 +117,7 @@ public void optimizedSort_!(Comparable[] a) {
 
 ### 优化2
 
-如果上面优化1代码中，里面一层循环在某次扫描中没有执行交换，则说明此时数组已经全部有序列，无需再扫描了。因此，增加一个标记，每次发生交换，就标记，
-如果某次循环完没有标记，则说明已经完成排序。
+如果上面优化1代码中，里面一层循环在某次扫描中没有执行交换，则说明此时数组已经全部有序列，无需再扫描了。因此，增加一个标记，每次发生交换，就标记，如果某次循环完没有标记，则说明已经完成排序。
 
 ```java 
 public void optimizedSort_2(Comparable[] a) {
@@ -141,9 +137,7 @@ public void optimizedSort_2(Comparable[] a) {
 
 ### 优化3
 
-在第一步优化的基础上发进一步思考：如果a[i..N]已是有序区间，上次的扫描区间是R[0..n], 其中N为整个集合的长度， n > i。记上次扫描时最后一次执行
-交换的位置为lastSwapPos，即为i，不难发现R[i..n]区间也是有序的，否则这个区间也会发生交换；所以下次扫描区间就可以由R[0..n-1]缩减到[0..lastSwapPos]，
-实现如下：
+在第一步优化的基础上发进一步思考：如果a[i..N]已是有序区间，上次的扫描区间是R[0..n], 其中N为整个集合的长度， n > i。记上次扫描时最后一次执行交换的位置为lastSwapPos，即为i，不难发现R[i..n]区间也是有序的，否则这个区间也会发生交换；所以下次扫描区间就可以由R[0..n-1]缩减到[0..lastSwapPos]，实现如下：
 
 ```java 
 public void bestSort(Comparable[] a){

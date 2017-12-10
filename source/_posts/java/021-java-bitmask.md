@@ -11,8 +11,7 @@ categories: "Java学习笔记"
 
 在下面的一个例子中，会用到位掩码（BitMask），其中包含大量的位运算。不只是在Java中，其他编写语言中也是可以使用的。
 
-例如，在一个系统中，用户一般有查询(Select)、新增(Insert)、修改(Update)、删除(Delete)四种权限，四种权限有多种组合方式，也就是有16中不同的
-权限状态（2的4次方）。
+例如，在一个系统中，用户一般有查询(Select)、新增(Insert)、修改(Update)、删除(Delete)四种权限，四种权限有多种组合方式，也就是有16中不同的权限状态（2的4次方）。
 
 ### Permission
 
@@ -116,8 +115,7 @@ ALLOW_INSERT = 1 << 1 转成二进制就是0010，二进制第二位表示Insert
 
 private int flag存储了各种权限的启用和停用状态，相当于代替了Permission中的四个boolean类型的变量。
 
-用flag的四个二进制位来表示四种权限的状态，每一位的0和1代表一项权限的启用和停用，如flag为1（0001）只允许查询（即等于ALLOW_SELECT），flag为
-15(1111)，四项权限都允许等。
+用flag的四个二进制位来表示四种权限的状态，每一位的0和1代表一项权限的启用和停用，如flag为1（0001）只允许查询（即等于ALLOW_SELECT），flag为15(1111)，四项权限都允许等。
 
 使用位掩码的方式，只需要用一个大于或等于0且小于16的整数即可表示所有的16种权限的状态。
 
@@ -144,8 +142,7 @@ permission.enable(NewPermission.ALLOW_INSERT
     | NewPermission.ALLOW_UPDATE | NewPermission.ALLOW_DELETE);
 ```
 
-NewPermission.ALLOW_INSERT | NewPermission.ALLOW_UPDATE | NewPermission.ALLOW_DELETE运算结果是1110。假设现有权限只有Select，
-也就是flag是0001。flag = 0001 | 1110，也就是1111，便拥有了这四项权限，相当于添加了三项权限。
+NewPermission.ALLOW_INSERT | NewPermission.ALLOW_UPDATE | NewPermission.ALLOW_DELETE运算结果是1110。假设现有权限只有Select，也就是flag是0001。flag = 0001 | 1110，也就是1111，便拥有了这四项权限，相当于添加了三项权限。
 
 上面的设置如果使用最初的Permission类的话，就需要下面三行代码：
 

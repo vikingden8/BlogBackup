@@ -9,8 +9,7 @@ categories: "Java学习笔记"
 
 只做部分翻译。
 
-This post is a cheatsheet with enumeration of options, which should be always used to configure Java Virtual Machine for 
-Web-oriented server applications (i.e. Web Front-End) in production or production-like environments.
+This post is a cheatsheet with enumeration of options, which should be always used to configure Java Virtual Machine for Web-oriented server applications (i.e. Web Front-End) in production or production-like environments.
 
 这篇文章列举出了JVM的参数清单，主要是用来配置Web生产或类生产环境服务器上的Java虚拟机（如Web前端）。
 
@@ -62,23 +61,20 @@ For lazy readers full listing is here (for curious detailed explanation is provi
 
 **-server**
 
-Turns Java VM features specific to server applications, such as sofisticated JIT compiler. Though this option is 
-implicitely enabled for x64 virtual machines, it still makes sence to use it as according to documentation behaviour 
+Turns Java VM features specific to server applications, such as sofisticated JIT compiler. Though this option is implicitely enabled for x64 virtual machines, it still makes sence to use it as according to documentation behaviour 
 maybe changed in the future.
 
 ### Make your Heap Explicit
 
 **-Xms<heap size>\[g|m|k] -Xmx<heap size>\[g|m|k]**
 
-To avoid dynamic heap resizing and lags, which could be caused by this, we explicitely specify minimal and maximal heap 
-size. Thus Java VM will spend time only once to commit on all the heap.
+To avoid dynamic heap resizing and lags, which could be caused by this, we explicitely specify minimal and maximal heap size. Thus Java VM will spend time only once to commit on all the heap.
 
 通过此可以显示的指定运行时的最小和最大堆大小。
 
 **-XX:PermSize=<perm gen size>\[g|m|k] -XX:MaxPermSize=<perm gen size>\[g|m|k]**
 
-Logic for permanent generation is the same as for overall heap — predefine sizing to avoid costs of dynamic changes. 
-Not applicable to Java >= 8.
+Logic for permanent generation is the same as for overall heap — predefine sizing to avoid costs of dynamic changes. Not applicable to Java >= 8.
 
 指定永久代的最小和最大值，这个参数在Java8及以上已无作用。
 
