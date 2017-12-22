@@ -6,13 +6,13 @@ categories: "随笔"
 
 下面的图片是从这篇文章中看到的：[男到中年，不如狗](https://tieba.baidu.com/p/5485805211?red_tag=0092364730)
 
-![](/images/categories/mood/01.jpg)
+![](/images/categories/mood/001/01.jpg)
 
-![](/images/categories/mood/02.jpg)
+![](/images/categories/mood/001/02.jpg)
 
-![](/images/categories/mood/03.jpg)
+![](/images/categories/mood/001/03.jpg)
 
-![](/images/categories/mood/04.jpg)
+![](/images/categories/mood/001/04.jpg)
 
 其实都一样...
 
