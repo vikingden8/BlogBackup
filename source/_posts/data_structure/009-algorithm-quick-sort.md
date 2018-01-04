@@ -26,7 +26,7 @@ categories: "数据结构与算法"
 
 ### 实现
 
-```java 
+```java
 public void sort(Comparable[] a) {
     realSort(a, 0, a.length - 1);
 }
@@ -63,9 +63,9 @@ public static boolean less(Comparable a , Comparable b){
 
 ### 图解
 
-![](/images/categories/data_structure/009/quick-sort.jpg)
+![](/images/categories/data_structure/009/quick_sort.jpg)
 
-### 参考 
+### 参考
 
 * [坐在马桶上看算法：快速排序](http://developer.51cto.com/art/201403/430986.htm)
 
