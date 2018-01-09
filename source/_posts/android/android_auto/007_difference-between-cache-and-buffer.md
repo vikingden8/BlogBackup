@@ -13,4 +13,4 @@ categories: "移动性能测试"
 
 [Settings.apk显示剩余内存代码分析](http://tjtech.me/analyze-free-memory-of-setting.html)
 
-[/proc/meminfo分析](http://www.cnblogs.com/embedded-linux/p/7282612.html)
+[linux/Documentation/filesystems/proc.txt](https://github.com/torvalds/linux/blob/master/Documentation/filesystems/proc.txt)
