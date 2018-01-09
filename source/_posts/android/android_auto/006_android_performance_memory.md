@@ -20,3 +20,7 @@ categories: "移动性能测试"
 [Process.java](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/os/Process.java)
 
 [Debug.java](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/os/Debug.java)
+
+[How to get current memory usage in android?](https://stackoverflow.com/questions/3170691/how-to-get-current-memory-usage-in-android)
+
+[Best Practices For Memory Optimization on Android](https://hsc.com/Blog/Best-Practices-For-Memory-Optimization-on-Android-1)
