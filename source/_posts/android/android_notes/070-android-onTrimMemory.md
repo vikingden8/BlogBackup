@@ -7,9 +7,9 @@ categories: "Android学习笔记"
 
 下面是关于Android中出现低内存时方法onTrimMemory回调的文章：
 
-[onLowMemory](https://developer.android.com/reference/android/app/Application.html#onLowMemory())
+[onLowMemory](https://developer.android.com/reference/android/app/Application.html#onLowMemory)
 
-[onTrimMemory](https://developer.android.com/reference/android/app/Application.html#onTrimMemory())
+[onTrimMemory](https://developer.android.com/reference/android/app/Application.html#onTrimMemory)
 
 [ComponentCallbacks2](https://developer.android.com/reference/android/content/ComponentCallbacks2.html)
 
