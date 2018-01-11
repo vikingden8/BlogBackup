@@ -1,6 +1,6 @@
 ---
 title: Android GC Notes
-date: 2018-1-4 10:54:36
+date: 2018-01-04 10:54:36
 tags:
 categories: "Android学习笔记"
 ---

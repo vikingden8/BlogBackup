@@ -1,6 +1,6 @@
 ---
 title: Linux /proc/meminfo中的Cached和Buffers区别
-date: 2018-01-9 23:56:57
+date: 2018-01-09 23:56:57
 tags:
 categories: "移动性能测试"
 ---

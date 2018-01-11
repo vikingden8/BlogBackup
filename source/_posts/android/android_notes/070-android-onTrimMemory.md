@@ -1,6 +1,6 @@
 ---
 title: Android onTrimMemory
-date: 2018-1-6 23:40:36
+date: 2018-01-6 23:40:36
 tags:
 categories: "Android学习笔记"
 ---
