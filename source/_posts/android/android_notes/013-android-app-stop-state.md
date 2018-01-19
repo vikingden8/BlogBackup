@@ -1,7 +1,7 @@
 ---
 title: 关于Android中App的停止状态
 date: 2017-2-4 09:31:16
-tags: [Android App Stop State,FLAG_EXCLUDE_STOPPED_PACKAGES,FLAG_INCLUDE_STOPPED_PACKAGES]
+tags: 
 categories: "Android学习笔记"
 ---
 

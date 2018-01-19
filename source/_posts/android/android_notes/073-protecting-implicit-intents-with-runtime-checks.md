@@ -2,7 +2,7 @@
 title: Protecting Implicit Intents with Runtime Checks
 date: 2017-07-19 23:39:50
 tags:
-categories: "Android Development Patterns"
+categories: "Android学习笔记"
 ---
 
 Implicit intents (https://developer.android.com/guide/components/intents-filters.html#ExampleSend) could cause an _ActivityNotFoundException_ if there’s no activity to handle the Intent you’ve created, whether it is from the user uninstalling or disabling the other apps, restricted profiles, or device administrator policies. Make sure you protect your implicit intents with a simple runtime check.
