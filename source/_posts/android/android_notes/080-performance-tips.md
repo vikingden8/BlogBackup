@@ -89,11 +89,15 @@ The class no longer requires a <clinit> method, because the constants go into st
 
 >Note: This optimization applies only to primitive types and String constants, not arbitrary reference types. Still, it's good practice to declare constants static final whenever possible.注意：这个优化只适应于原始类型和String常量，而非引用类型．
 
-### Use Enhanced For Loop Syntax 使用增强的循环写法
+### Use Enhanced For Loop Syntax 使用增强的For循环写法
 
 The enhanced for loop (also sometimes known as "for-each" loop) can be used for collections that implement the Iterable interface and for arrays. With collections, an iterator is allocated to make interface calls to hasNext() and next(). With an ArrayList, a hand-written counted loop is about 3x faster (with or without JIT), but for other collections the enhanced for loop syntax will be exactly equivalent to explicit iterator usage.
 
+加强型的for循环，有时也叫作'for-each'循环，能应用于实现了Iterable接口的集合和数组．对于集合，将会创建一个迭代器来调用hasNext()和next()接口．对于ArrayList，不管有没有JIT差不多就有三倍速率的提升，而对于其他的集合，使用增强型for循环和迭代器的效率差不多．
+
 There are several alternatives for iterating through an array:
+
+下面是一数组的不同遍历方式实现：
 
 ```java
 static class Foo {
@@ -128,19 +132,23 @@ public void two() {
 
 ```
 
-* zero() is slowest, because the JIT can't yet optimize away the cost of getting the array length once for every iteration through the loop.
+* zero() is slowest, because the JIT can't yet optimize away the cost of getting the array length once for every iteration through the loop. zero()是最慢的，因为JIT不能在每次迭代时要去获取数组长度的优化．
 
-* one() is faster. It pulls everything out into local variables, avoiding the lookups. Only the array length offers a performance benefit.
+* one() is faster. It pulls everything out into local variables, avoiding the lookups. Only the array length offers a performance benefit.　one()是快的，它把所有的都变成了局部变量，有效避免了每次去获取．但是与上面的比较来看，只有在每次循环数组长度的获取上提供了性能优化．
 
-* two() is fastest for devices without a JIT, and indistinguishable from one() for devices with a JIT. It uses the enhanced for loop syntax introduced in version 1.5 of the Java programming language.
+* two() is fastest for devices without a JIT, and indistinguishable from one() for devices with a JIT. It uses the enhanced for loop syntax introduced in version 1.5 of the Java programming language.　two()在没有使用JIT的情况下是最快的，如果使用了JIT的话，与第一种one()很难区分优劣．它使用了在Java　1.5上提出的增强型for循环语法．
 
 So, you should use the enhanced for loop by default, but consider a hand-written counted loop for performance-critical ArrayList iteration.
+
+所以，在默认情况下建议应该使用增强型的for循环，但是如果是ArrayList且对性能很苛刻的话，建议使用手写的计数循环来迭代．
 
 >Tip: Also see Josh Bloch's Effective Java, item 46.
 
 #### Consider Package Instead of Private Access with Private Inner Classes
 
 Consider the following class definition:
+
+考虑下面的类定义：
 
 ```Java
 public class Foo {
@@ -193,7 +201,11 @@ If you're using code like this in a performance hotspot, you can avoid the overh
 
 As a rule of thumb, floating-point is about 2x slower than integer on Android-powered devices.
 
+根据经验来说，在Android设备上浮点型比整型的速率要慢2倍多．
+
 In speed terms, there's no difference between float and double on the more modern hardware. Space-wise, double is 2x larger. As with desktop machines, assuming space isn't an issue, you should prefer double to float.
+
+从速度上来看，在现代设备上float和double没差别．在空间方面，double要比float大两倍．在桌面系统上，试想空间不是问题，你可以倾向于使用double.
 
 Also, even for integers, some processors have hardware multiply but lack hardware divide. In such cases, integer division and modulus operations are performed in software—something to think about if you're designing a hash table or doing lots of math.
 
@@ -201,11 +213,15 @@ Also, even for integers, some processors have hardware multiply but lack hardwar
 
 In addition to all the usual reasons to prefer library code over rolling your own, bear in mind that the system is at liberty to replace calls to library methods with hand-coded assembler, which may be better than the best code the JIT can produce for the equivalent Java. The typical example here is String.indexOf() and related APIs, which Dalvik replaces with an inlined intrinsic. Similarly, the System.arraycopy() method is about 9x faster than a hand-coded loop on a Nexus One with the JIT.
 
+尽量使用一些系统提供的库而不是自己手动实现．
+
 >Tip: Also see Josh Bloch's Effective Java, item 47.
 
 ### Use Native Methods Carefully
 
 Developing your app with native code using the Android NDK isn't necessarily more efficient than programming with the Java language. For one thing, there's a cost associated with the Java-native transition, and the JIT can't optimize across these boundaries. If you're allocating native resources (memory on the native heap, file descriptors, or whatever), it can be significantly more difficult to arrange timely collection of these resources. You also need to compile your code for each architecture you wish to run on (rather than rely on it having a JIT). You may even have to compile multiple versions for what you consider the same architecture: native code compiled for the ARM processor in the G1 can't take full advantage of the ARM in the Nexus One, and code compiled for the ARM in the Nexus One won't run on the ARM in the G1.
+
+使用Android NDK来开发你的应用时不一定比Java语言高效．
 
 Native code is primarily useful when you have an existing native codebase that you want to port to Android, not for "speeding up" parts of your Android app written with the Java language.
 
@@ -225,6 +241,8 @@ On devices without a JIT, caching field accesses is about 20% faster than repeat
 ### Always Measure
 
 Before you start optimizing, make sure you have a problem that you need to solve. Make sure you can accurately measure your existing performance, or you won't be able to measure the benefit of the alternatives you try.
+
+在优化之前你必须要确认有存在的问题需要优化．确认可以正确的衡量现有的性能．否则你将不能衡量你将要尝试优化方法的益处．
 
 You may also find Traceview useful for profiling, but it's important to realize that it currently disables the JIT, which may cause it to misattribute time to code that the JIT may be able to win back. It's especially important after making changes suggested by Traceview data to ensure that the resulting code actually runs faster when run without Traceview.
 
