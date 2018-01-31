@@ -13,8 +13,8 @@ Future代表一个异步计算的结果。它提供了方法来检查是否计�
 
 比如，要设置一个方法执行的超时时间：
 
-![](/images/catgories/java/033/01.png)
+![](/images/categories/java/033/01.png)
 
 输出:
 
-![](/images/catgories/java/033/02.png)
+![](/images/categories/java/033/02.png)

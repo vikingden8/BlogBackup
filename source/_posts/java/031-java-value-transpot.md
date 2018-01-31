@@ -63,7 +63,7 @@ viking@Viking ~/work/java-projects/java-demo $
 
 第1，2条容易，新建两个Point对象，赋值（2，3）
 
-![](/images/catgories/java/031/01.jpg)
+![](/images/categories/java/031/01.jpg)
 
 此时输出：
 
@@ -74,7 +74,7 @@ p2 x: 2, y: 3
 
 进入到方法中，p1和p2的对象地址传给arg1和arg2。所以arg1和arg2也指向了对应的对象：
 
-![](/images/catgories/java/031/02.jpg)
+![](/images/categories/java/031/02.jpg)
 
 在tricky()方法中：
 
@@ -85,7 +85,7 @@ arg1.y = 100;
 
 因此其所指的对象内的值发生了变化（注意这里地址没有改变）。
 
-![](/images/catgories/java/031/03.jpg)
+![](/images/categories/java/031/03.jpg)
 
 ```java
 Point temp = arg1;
@@ -93,7 +93,7 @@ arg1 = arg2;
 arg2 = temp;
 ```
 
-![](/images/catgories/java/031/04.jpg)
+![](/images/categories/java/031/04.jpg)
 
 观察上图，这时方法内的输入如下：
 
@@ -104,7 +104,7 @@ Inside func arg2 x: 100, y: 100
 
 跳出方法后：
 
-![](/images/catgories/java/031/05.jpg)
+![](/images/categories/java/031/05.jpg)
 
 此时p1和p2的输出如下：
 

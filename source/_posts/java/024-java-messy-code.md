@@ -13,7 +13,7 @@ categories: "Java学习笔记"
 
 我们来看一个这种错误转换后的乱码，还是用上节的例子，二进制是(16进制表示)：C3 80 C3 8F C3 82 C3 AD，无论按哪种编码解析看上去都是乱码：
 
-![](/images/catgories/java/024/m_code_01.png)
+![](/images/categories/java/024/m_code_01.png)
 
 虽然有这么多形式，但我们看到的乱码形式很可能是"ÀÏÂí"
 
@@ -33,13 +33,13 @@ UltraEdit支持编码转换和切换查看编码方式，也支持文件的二�
 
 新建一个UTF-8编码的文件，拷贝"ÀÏÂí"到文件中。使用编码转换，转换到windows-1252编码，功能在 "文件"->"转换到"->"西欧"->WIN-1252。转换完后，打开十六进制编辑，查看其二进制形式，如下图所示：
 
-![](/images/catgories/java/024/m_code_02.jpg)
+![](/images/categories/java/024/m_code_02.jpg)
 
 可以看出，其形式还是ÀÏÂí，但二进制格式变成了 C0 CF C2 ED。这个过程，相当于假设B是windows-1252。这个时候，再按照多种编码格式查看这个二进制，在UltraEdit中，关闭十六进制编辑，切换查看编码方式为GB18030，功能在 "视图"->"查看方式（文件编码）"->"东亚语言"->GB18030，切换完后，同样的二进制神奇的变为了正确的字符形式 "老马"，打开十六进制编辑器，可以看出，二进制还是C0 CF C2 ED，这个GB18030相当于假设A是GB18030。
 
 这个例子我们碰巧第一次就猜对了。实际中，我们可能要做多次尝试，过程是类似的，先进行编码转换（使用B编码），然后使用不同编码方式查看（使用A编码），如果能找到看上去对的形式，就恢复了。下图列出了主要的B编码格式，对应的二进制，按A编码解读的各种形式。
 
-![](/images/catgories/java/024/m_code_03.jpg)
+![](/images/categories/java/024/m_code_03.jpg)
 
 可以看出，第一行是正确的，也就是说原来的编码其实是A即GB18030，但被错误解读成了B即Windows-1252了。
 
@@ -55,7 +55,7 @@ Java中处理字符串的类有String，String中有我们需要的两个重要�
 
 将A看做GB18030，B看做Windows-1252，进行恢复的Java代码如下所示：
 
-```java 
+```java
 String str = "ÀÏÂí";
 String newStr = new String(str.getBytes("windows-1252"),"GB18030");
 System.out.println(newStr);
@@ -65,8 +65,8 @@ System.out.println(newStr);
 
 同样，这个一次碰巧就对了，实际中，我们可以写一个循环，测试不同的A/B编码中的结果形式，代码如下所示：
 
-```java 
-public static void recover(String str) 
+```java
+public static void recover(String str)
         throws UnsupportedEncodingException{
     String[] charsets = new String[]{"windows-1252","GB18030","Big5","UTF-8"};
     for(int i=0;i<charsets.length;i++){
@@ -79,7 +79,7 @@ public static void recover(String str)
             }
         }
     }
-} 
+}
 ```
 
 以上代码使用不同的编码格式进行测试，如果输出有正确的，那么就可以恢复。
@@ -89,7 +89,3 @@ public static void recover(String str)
 可以看出，这种尝试需要进行很多次，上面例子尝试了常见编码GB18030/Windows 1252/Big5/UTF-8共十二种组合。这四种编码是常见编码，在大部分实际应用中应该够了，但如果你的情况有其他编码，可以增加一些尝试。
 
 不是所有的乱码形式都是可以恢复的，如果形式中有很多不能识别的字符如�?，则很难恢复，另外，如果乱码是由于进行了多次解析和转换错误造成的，也很难恢复。
-
-
-
-

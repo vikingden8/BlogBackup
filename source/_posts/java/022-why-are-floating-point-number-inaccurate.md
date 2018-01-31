@@ -40,7 +40,7 @@ System.out.println(f);
 
 二进制是类似的，但二进制只能表示哪些可以表述为2的多少次方和的数，来看下2的次方的一些例子：
 
-![](/images/catgories/java/022/floating_number.png)
+![](/images/categories/java/022/floating_number.png)
 
 可以精确表示为2的某次方之和的数可以精确表示，其他数则不能精确表示。
 
@@ -53,7 +53,7 @@ System.out.println(f);
 如果你编写程序进行试验，你会发现有的计算结果是准确的。比如，我用Java写：
 
 ```
-System.out.println(0.1f+0.1f); 
+System.out.println(0.1f+0.1f);
 System.out.println(0.1f*0.1f);
 ```
 
@@ -95,7 +95,7 @@ Long.toBinaryString(Double.doubleToLongBits(value));
 ```
 
 ### 小结
-    
+
 小数计算为什么会出错呢？理由就是：很多小数计算机中不能精确表示。
 
 计算机的基本思维是二进制的，所以，意料之外，情理之中!
