@@ -66,3 +66,5 @@ protected void onPostExecute(Void result) {
 #### 小结
 
 如果对方没听说过isFinishing函数，那可以让他从自己的角度看如何解决这个问题，正好可以看看他的逻辑思维是否清晰合理。工作中往往会遇到，一些求职者由于之前是做其他方面刚转Android开发，对Android的了解还不够，但有很强理解和学习能力，通过引导发现他可以快速的得到合理的解决方案的话，我一般都很乐意要这样的人。
+
+转载自：[Android面试一天一题（4 Day）](https://www.jianshu.com/p/f8a0c43b3dfe)
