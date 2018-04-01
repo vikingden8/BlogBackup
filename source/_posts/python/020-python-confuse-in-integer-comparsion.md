@@ -1,6 +1,6 @@
 ---
 title: Python解惑-整数比较
-date: 2018-04-1 10:25:08
+date: 2018-04-01 10:25:08
 tags:
 categories: "Python学习笔记"
 ---
