@@ -70,9 +70,8 @@ hello java python
 >>> print(':'.join(dict))
 hello:java:python
 >>>
-
-可以看出，字典的叠加只是针对于键，而且顺序是变化的。
 ```
+可以看出，字典的叠加只是针对于键，而且顺序是变化的。
 
 
 
