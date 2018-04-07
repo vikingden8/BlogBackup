@@ -19,6 +19,8 @@ I'm Viking Den. I'm 29 year old
 >>>
 ```
 
+<!--more-->
+
 上面的例子中，
 
 “I’m %s. I’m %d year old” 为我们的模板。%s为第一个格式符，表示一个字符串。%d为第二个格式符，表示一个整数。('Viking Den', 29)的两个元素’Viking Den’和99为替换%s和%d的真实值。在模板和tuple之间，有一个%号分隔，它代表了格式化操作。
