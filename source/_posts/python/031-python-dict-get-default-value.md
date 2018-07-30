@@ -84,7 +84,7 @@ def greeting(userid):
 "Hi Bob!"
 
 >>> greeting(333333)
-"Hi there!"
+"Hi, user not exist!"
 ```
 
 greeting() 最后的实现方式看起来更加的简洁，明了。
