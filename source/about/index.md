@@ -16,6 +16,4 @@ If you want to chat, don't hesitate to contact me from the section below. Thanks
 * Email : vikingden@live.com
 * Github: [vikingden8](https://github.com/vikingden8)
 * Google+: [vikingden](https://plus.google.com/107970138352416362912)
-* Twitter: [vikingden](https://twitter.com/viking_den)  
-* QQ: ![](/images/contacts/qq.jpg)
-* WeChat: ![](/images/contacts/wechat.JPG)
+* Twitter: [vikingden](https://twitter.com/viking_den)
